@@ -1,0 +1,1247 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Hamza Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Fri Sep 25 2015 13:02:11 GMT+0545 (Nepal Standard Time)\n"
+"POT-Revision-Date: Fri Sep 25 2015 13:02:15 GMT+0545 (Nepal Standard Time)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../404.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:18
+msgid "404"
+msgstr ""
+
+#: ../404.php:19
+msgid "error"
+msgstr ""
+
+#: ../404.php:23
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#: ../archive.php:29
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../archive.php:32
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: ../archive.php:35
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: ../archive.php:35
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../archive.php:38
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: ../archive.php:38
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../archive.php:41
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:44
+msgid "Galleries"
+msgstr ""
+
+#: ../archive.php:47
+msgid "Images"
+msgstr ""
+
+#: ../archive.php:50
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:53
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:56
+msgid "Links"
+msgstr ""
+
+#: ../archive.php:59
+msgid "Statuses"
+msgstr ""
+
+#: ../archive.php:62
+msgid "Audios"
+msgstr ""
+
+#: ../archive.php:65
+msgid "Chats"
+msgstr ""
+
+#: ../archive.php:68
+msgid "Archives"
+msgstr ""
+
+#: ../comments.php:28
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:45
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:46
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:83
+msgid "Add Your Comment"
+msgstr ""
+
+#: ../comments.php:84
+#, php-format
+msgid "Add Your Comment to %s"
+msgstr ""
+
+#: ../comments.php:85
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../comments.php:86
+msgid "Submit"
+msgstr ""
+
+#: ../comments.php:94
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:100
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
+"account\">Log out?</a>"
+msgstr ""
+
+#: ../footer.php:11 ../footer.php:98 ../inc/hamza-lite-customizer.php:261
+msgid "8Degree Themes"
+msgstr ""
+
+#: ../footer.php:90
+msgid "Copyright"
+msgstr ""
+
+#: ../footer.php:98
+msgid "Theme:"
+msgstr ""
+
+#: ../footer.php:98
+msgid "Hamza Lite"
+msgstr ""
+
+#: ../functions.php:67
+msgid "Primary Menu"
+msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:9
+msgid "Search"
+msgstr ""
+
+#. Name of the template
+msgid "Front Page"
+msgstr ""
+
+#: ../template-frontpage.php:12 ../template-frontpage.php:16 ../template-
+#: frontpage.php:30 ../inc/hamza-lite-custom-functions.php:333 ../inc/hamza-lite-
+#: custom-functions.php:369 ../inc/hamza-lite-customizer.php:232 ../inc/hamza-
+#: lite-customizer.php:363 ../inc/hamza-lite-customizer.php:797 ../template-
+#: parts/content-summary.php:11
+msgid "Read More"
+msgstr ""
+
+#: ../template-frontpage.php:17 ../inc/hamza-lite-customizer.php:381
+msgid "Buy Now"
+msgstr ""
+
+#: ../template-frontpage.php:46 ../inc/hamza-lite-customizer.php:942
+msgid "Recent Post"
+msgstr ""
+
+#: ../template-frontpage.php:421
+msgid "View All"
+msgstr ""
+
+#: ../inc/hamza-lite-about-us.php:21
+msgid "Hamza Lite - is a FREE WordPress theme by"
+msgstr ""
+
+#: ../inc/hamza-lite-about-us.php:23
+msgid " 8Degree Themes "
+msgstr ""
+
+#: ../inc/hamza-lite-about-us.php:25
+msgid "- A WordPress Division of 8Degree."
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:64
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:99
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:101
+msgid "Display items in the Left Sidebar of the inner pages"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:109
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:111
+msgid "Display items in the Right Sidebar of the inner pages"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:119
+msgid "Shop Sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:121
+msgid "Display items in the Right Sidebar of the inner pages for Woocommerce"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:129
+msgid "Footer One"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:131
+msgid "Display items in First Footer Area"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:139
+msgid "Footer Two"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:141
+msgid "Display items in Second Footer Area"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:149
+msgid "Footer Three"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:151
+msgid "Display items in Third Footer Area"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:159
+msgid "Footer Four"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:161
+msgid "Display items in Fourth Footer Area"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:236 ../inc/hamza-lite-customizer.php:1889
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:240 ../inc/hamza-lite-customizer.php:1907
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:244
+msgid "Google Plus"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:248 ../inc/hamza-lite-customizer.php:1943
+msgid "Linkedin"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:252 ../inc/hamza-lite-customizer.php:1961
+msgid "Youtube"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by Noto Sans, translate this to 'off'. Do not translate into your own language.
+#. Translators: If there are characters in your language that are not supported
+#. by Noto Serif, translate this to 'off'. Do not translate into your own language.
+#: ../inc/hamza-lite-custom-functions.php:604 ../inc/hamza-lite-custom-functions.
+#: php:612
+msgid "on"
+msgstr ""
+
+#. Translators: To add an additional character subset specific to your language,
+#. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
+#: ../inc/hamza-lite-custom-functions.php:620
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:715
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:720
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: ../inc/hamza-lite-custom-functions.php:728
+#, php-format
+msgid "%1$s %2$s"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-functions.php:728 ../template-parts/content-page.php:
+#: 34 ../template-parts/content-single.php:68
+msgid "Edit"
+msgstr ""
+
+#. $id
+#. $id
+#: ../inc/hamza-lite-custom-metabox.php:14 ../inc/hamza-lite-custom-metabox.php:22
+msgid "Sidebar Layout"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-metabox.php:33
+msgid "Left sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-metabox.php:38
+msgid "Right sidebar<br/>(default)"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-metabox.php:43
+msgid "Both Sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-metabox.php:49
+msgid "No sidebar"
+msgstr ""
+
+#: ../inc/hamza-lite-custom-metabox.php:63
+msgid "Choose Sidebar Template"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:13
+msgid "Choose Post"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:29
+msgid "Choose Category"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:46
+msgid "Normal"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:47
+msgid "Uppercase"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:48
+msgid "Lowercase"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:49
+msgid "Capitalize"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:59
+msgid "Default Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:60
+msgid "Default section provided by wordpress customizer."
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:78
+msgid "Basic Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:86
+msgid "Design Layout"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:103
+msgid "Choose Web Page Layout?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:107
+msgid "Fullwidth"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:108
+msgid "Boxed"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:124
+msgid "Disable Responsive Design?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:125 ../inc/hamza-lite-customizer.php:1859
+msgid "Check To Disable"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:135
+msgid "Header Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:153
+msgid "Header Logo Alignment"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:157
+msgid "Left"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:158
+msgid "Center"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:174
+msgid "Email"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:191
+msgid "Phone"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:208
+msgid "Show Search in Header?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:209
+msgid "Check to enable"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:213
+msgid "Enable"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:214
+msgid "Disable"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:223
+msgid "Read More Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:241
+msgid "Edit Read More Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:242
+msgid "Read More text for Archive page"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:251
+msgid "Footer Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:252
+msgid "Edit Footer Copyright Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:278
+msgid "Exclude Category Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:295
+msgid "Category IDs"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:298
+msgid "Example: 203,204,205,206,207,208"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:310
+msgid "Homepage Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:318
+msgid "Call To Action Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:334
+msgid "Call To Action Post"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:353
+msgid "Call To Action Post Excerpt Character"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:355
+msgid "Select the number of character for call to action post excerpt character"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:371 ../inc/hamza-lite-customizer.php:805 ..
+#: /inc/widgets/widget-featured-post.php:42
+msgid "Read More Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:373
+msgid "Leave blank if you don't want to show read more"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:389
+msgid "Buy Button"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:390 ../inc/hamza-lite-customizer.php:409
+msgid "Leave blank if you don't want to show"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:407
+msgid "Buy Button Link"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:426
+msgid "Check to show full content"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:436
+msgid "Service Section"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:453
+msgid "Service Section Title"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:470
+msgid "Serivice Section Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:472 ../inc/hamza-lite-customizer.php:625 ..
+#: /inc/hamza-lite-customizer.php:852
+msgid "Html content allowed"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:488
+msgid "Service Post 1"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:508 ../inc/hamza-lite-customizer.php:544 ..
+#: /inc/hamza-lite-customizer.php:580 ../inc/hamza-lite-customizer.php:682 ..
+#: /inc/hamza-lite-customizer.php:717 ../inc/hamza-lite-customizer.php:752 ..
+#: /inc/hamza-lite-customizer.php:788
+msgid "Font Awesome icon name </br> Example: fa-bell"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:524
+msgid "Service Post 2"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:560
+msgid "Service Post 3"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:589
+msgid "Featured Post Section"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:606
+msgid "Featured Title"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:623
+msgid "Featured Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:642
+msgid "Check To Enable Font Awesome Icon"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:644
+#, php-format
+msgid ""
+"(If enabled the featured image will be replaced by Font Awesome Icon. For "
+"lists of icons click <a href=\"%s\" target=\"_blank\">here</a>)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:662
+msgid "Featured Post 1"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:697
+msgid "Feature Post 2"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:732
+msgid "Feature Post 3"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:768
+msgid "Feature Post 4"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:807
+msgid "Leave blank if you don't want to show read more!"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:816
+msgid "Latest Portfolio Section"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:833
+msgid "Portfolio Title"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:850
+msgid "Portfolio Text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:867
+msgid "Select the category to display as Portfolio"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:878
+msgid "Latest Blog Section"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:894
+msgid "Select the category to display as Blog"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:913
+msgid "Check to enable Blog Posted Date"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:914
+msgid "If enabled Blog Posted Date will be shown"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:932
+msgid "Check to disable Blog View All button"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:933
+msgid "if disabled Blog View All button will hide"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:950
+msgid "Recent Post Title"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:966
+msgid "Select the category to display as Recent Post"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:977
+msgid "Testimonail Slider"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:994
+msgid "Select the category to display as Testimonials"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1005
+msgid "Google Map Section"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1022
+msgid "Google Map Iframe"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1024
+msgid "Enter the Google Map Iframe"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1040
+msgid "Contact Address"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1042
+msgid "Enter the Contact Address Detail"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1058
+msgid "Contact Form"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1060
+msgid ""
+"Enter the Contact Form Shortcode. Ex. [contact-form-7 id=\"186\" title=\"Google "
+"contact\"]"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1072
+msgid "Slider Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1073
+msgid "Homepage slider settings, change the following options to control the slider"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1081
+msgid "General Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1098
+msgid "Show/Hide Slider"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1102 ../inc/hamza-lite-customizer.php:1190
+msgid "Show"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1103 ../inc/hamza-lite-customizer.php:1191
+msgid "Hide"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1120
+msgid "Show Slider Pager"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1124 ../inc/hamza-lite-customizer.php:1168
+msgid "Yes"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1125 ../inc/hamza-lite-customizer.php:1169
+msgid "No"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1142
+msgid "Slider Transition - fade/slide"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1146
+msgid "Fade"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1147
+msgid "Slide"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1164
+msgid "Slider auto Transition"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1186
+msgid "Show slider captions"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1208
+msgid "Choose slider speed?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1226
+msgid "Choose slider pause time?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1236
+msgid "Slider Selection Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1253
+msgid "Choose Slider Type"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1257
+msgid "Single Posts as a Slider"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1258
+msgid "Category Posts as a Slider"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1267
+msgid "Slider Selection(Post)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1268
+msgid "Enable single post as slider in slider selection setting section."
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1283
+msgid "Slider 1"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1299
+msgid "Slider 2"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1315
+msgid "Slider 3"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1331
+msgid "Slider 4"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1342
+msgid "Slider Selection(Category)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1357
+msgid "Select the Category"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1358
+msgid "Enable category as slider in slider selectoin setting section."
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1373
+msgid "Typography Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1381
+msgid "Font Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1398
+msgid "Header Tags Font"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1399
+msgid "Choose a font for the headline H1, H2, H3, H4, H5, H6 text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1417
+msgid "Header Tags Font Weight"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1418
+msgid "Choose a font weight for the headline H1, H2, H3, H4, H5, H6 text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1422 ../inc/hamza-lite-customizer.php:1465
+msgid "300"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1423 ../inc/hamza-lite-customizer.php:1466
+msgid "400"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1424
+msgid "600"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1425
+msgid "700"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1441
+msgid "Body Text Font"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1442
+msgid "Choose a font for the Body text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1460
+msgid "Body Text Font Weight"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1461
+msgid "Choose a font weight for the Body text"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1475
+msgid "Tag Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1493
+msgid "H1 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1510
+msgid "H1 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1528
+msgid "H1 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1545
+msgid "H2 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1562
+msgid "H2 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1580
+msgid "H2 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1597
+msgid "H3 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1614
+msgid "H3 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1632
+msgid "H3 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1649
+msgid "H4 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1666
+msgid "H4 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1684
+msgid "H4 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1701
+msgid "H5 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1718
+msgid "H5 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1736
+msgid "H5 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1753
+msgid "H6 Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1770
+msgid "H6 Text Transform"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1788
+msgid "H6 Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1805
+msgid "Body Text Font Size (px)"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1821
+msgid "Body Text Color"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1833
+msgid "Social Link Settings"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1834
+msgid "Put your social url"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1842
+msgid "Enable/Disable Social Link"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1862
+msgid "Disable Social icons in Footer?"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1870
+msgid "Social Links"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1871
+msgid "Put your social url below.. Leave blank if you don't want to show it."
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1925
+msgid "Google plus"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1972
+msgid "Tools"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1990
+msgid "Custom Css"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:1992
+msgid "Put your custom CSS"
+msgstr ""
+
+#: ../inc/hamza-lite-customizer.php:2003
+msgid "About Hamza Lite"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:27
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:72
+msgid "<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:76
+msgid "<span class=\"meta-nav\">&larr;</span>"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:101
+msgid "Post navigation"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:104
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:105
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/hamza-lite-template-tags.php:130
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: ../inc/widgets/widget-featured-post.php:22
+msgid "8D : Hamza Lite Featured Post"
+msgstr ""
+
+#: ../inc/widgets/widget-featured-post.php:24
+msgid "A widget that shows featued post."
+msgstr ""
+
+#: ../inc/widgets/widget-featured-post.php:37
+msgid "Post"
+msgstr ""
+
+#: ../inc/widgets/widget-featured-post.php:47
+msgid "Excerpt Character"
+msgstr ""
+
+#: ../inc/widgets/widget-fields.php:13 ../inc/widgets/widget-fields.php:35
+msgid "--choose--"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:23
+msgid "8D : Flickr Stream"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:25
+msgid "Displays your Flickr photos."
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:39 ../inc/widgets/widget-recent-
+#: portfolio.php:37 ../inc/widgets/widget-recent-post.php:37
+msgid "Title"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:45
+msgid "Flickr ID"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:50
+msgid "Number of Photos"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:61
+msgid "Type (user or group)"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:64
+msgid "User"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:65
+msgid "Group"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:70
+msgid "Display"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:73
+msgid "Latest"
+msgstr ""
+
+#: ../inc/widgets/widget-flickr-stream.php:74
+msgid "Random"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-portfolio.php:22
+msgid "8D : Hamza Lite Recent Portfolio"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-portfolio.php:24
+msgid "A widget that shows recent portfolio with selected category"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-portfolio.php:42 ../inc/widgets/widget-recent-
+#: post.php:42
+msgid "Category"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-portfolio.php:47 ../inc/widgets/widget-recent-
+#: post.php:47
+msgid "Number of Posts"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-post.php:22
+msgid "8D : Hamza Lite Recent Posts"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-post.php:24
+msgid "A widget that shows recent posts of selected category"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-post.php:52
+msgid "Show featured image"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-post.php:57
+msgid "Show Post Date"
+msgstr ""
+
+#: ../template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../template-parts/content-none.php:19
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../template-parts/content-page.php:29 ../template-parts/content-summary.php:
+#: 159 ../template-parts/content.php:36
+msgid "Pages:"
+msgstr ""
+
+#: ../template-parts/content-single.php:34 ../template-parts/content-summary.php:87
+#, php-format
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#: ../template-parts/content-single.php:39 ../template-parts/content-summary.php:
+#: 92 ../template-parts/content-summary.php:171 ../template-parts/content-summary.
+#: php:181 ../template-parts/content.php:48 ../template-parts/content.php:58
+msgid ", "
+msgstr ""
+
+#: ../template-parts/content-single.php:43 ../template-parts/content-summary.php:96
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: ../template-parts/content-single.php:50 ../template-parts/content-summary.php:
+#: 103
+msgid "Views"
+msgstr ""
+
+#: ../template-parts/content-single.php:55 ../template-parts/content-summary.php:
+#: 108
+msgid "By "
+msgstr ""
+
+#: ../template-parts/content-summary.php:175 ../template-parts/content.php:52
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: ../template-parts/content-summary.php:185 ../template-parts/content.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: ../template-parts/content.php:33
+msgid "More"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://8degreethemes.com/demo/hamza-lite/"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Hamza Lite- is beautifully designed, multi-purpose, feature-rich modern "
+"responsive theme. It is - Woocommerce, bbPress compatible, RTL supported, "
+"translation ready, cross-browser compatible and SEO friendly.  It features: "
+"different page layout like portfolio, testimonial, gallery, blog etc and has "
+"a strong call to action to help achieve greater conversion. With its "
+"extensive theme option panel, configuring theme is easy, fast and fun. Hamza "
+"Lite is multi-purpose and is suitable for travel, corporate, portfolio, "
+"photography, nature, health, small biz, personal, creative, corporate, "
+"agencies, bloggers anyone and everyone. Demo: http://8degreethemes."
+"com/demo/hamza-lite/"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://8degreethemes.com/"
+msgstr ""
