@@ -141,6 +141,27 @@
             );
             $('.aam-notification-container').removeClass('hidden');
         }
+        
+        //Error Fix promotion code
+        $.ajax(aamLocal.ajaxurl, {
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                action: 'aam',
+                sub_action: 'getErrorFixStatus',
+                _ajax_nonce: aamLocal.nonce
+            },
+            success: function (response) {
+                if (response.status === 'show') {
+                    $('#errorfix-promotion').removeClass('hidden');
+                    $('#errorfix-install-btn').attr(
+                            'href', response.url.replace(/&amp;/g, '&')
+                    );
+                } else {
+                    $('#errorfix-promotion').remove();
+                }
+            }
+        });
     };
 
     /**

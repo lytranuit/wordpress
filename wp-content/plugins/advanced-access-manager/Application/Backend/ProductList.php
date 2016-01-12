@@ -39,13 +39,6 @@ return array(
         'status' => AAM_Core_Repository::getInstance()->extensionStatus('AAM Role Filter')
     ),
     array(
-        'title' => 'WP Error Fix',
-        'id' => 'wp-error-fix',
-        'type' => 'plugin',
-        'description' => __('Monitory your website for any type of PHP errors and provides fixes.', AAM_KEY),
-        'status' => AAM_Core_Repository::getInstance()->pluginStatus('WP Error Fix')
-    ),
-    array(
         'title' => 'AAM Utilities',
         'id' => 'AAM Utilities',
         'type' => 'GNU',
