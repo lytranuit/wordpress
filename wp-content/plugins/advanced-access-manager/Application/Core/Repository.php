@@ -105,6 +105,9 @@ class AAM_Core_Repository {
                     $this->bootstrapExtension($basedir . '/' . $extension);
                 }
             }
+            //Very important hook for cases when there is extensions dependancy.
+            //For example AAM Plus Package depends on AAM Utitlities properties
+            do_action('aam-post-extensions-load');
         }
     }
 
@@ -196,7 +199,8 @@ class AAM_Core_Repository {
     
     /**
      * 
-     * @param type $title
+     * @param type $slug
+     * 
      * @return type
      */
     public function pluginStatus($slug) {
