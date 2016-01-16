@@ -17,72 +17,100 @@ function create_form_dang_tin() {
     if (is_user_logged_in()) {
         $user_id = get_current_user_id();
         $current_user = wp_get_current_user();
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['post_nonce_field']) && wp_verify_nonce($_POST['post_nonce_field'], 'post_nonce')) {
-            if (isset($_POST['post_title'])) {
-                $post_title = $_POST['post_title'];
-            }
-            if (isset($_POST['post_content'])) {
-                $post_content = $_POST['post_content'];
-            } else {
-                echo 'Please enter the content';
-            }
-            if (isset($_POST['post_type'])) {
-                $post_type = $_POST['post_category'];
-            }
-        } else {
-            $taxonomies = array(
-                'khu-vuc'
-            );
-            $args = array(
-                'orderby' => 'asc',
-                'hide_empty' => false,
-                'parent' => 0
-            );
-            $categories = get_terms($taxonomies, $args);
-            wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
+        $taxonomies = array(
+            'khu-vuc'
+        );
+        $args = array(
+            'orderby' => 'asc',
+            'hide_empty' => false,
+            'parent' => 0
+        );
+        $categories = get_terms($taxonomies, $args);
+        wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
+        ?>
+        <form method="post" class="form-horizontal" action="">
+            <div class="form-group col-sm-12 col-md-6">
+                <label for="post_title">
+                    Tiêu đề:
+                </label>
+                <input type="text" name="post_title" class="form-control" placeholder="Tiêu đề" />
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label for="post_content">
+                    Nội dung 
+                </label>
+                <?php wp_editor('', 'mycustomeditor', array('textarea_name' => 'post_content', 'media_buttons' => false, 'quicktags' => false)); ?>
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Tỉnh/Thành phố
+                </label>
+                <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp">
+                    <option>--- Chọn Tỉnh/Thành ---</option>
+                    <?php foreach ($categories as $cate) { ?>
+                        <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Quận/Huyện:
+                </label>
+                <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan">
+                    <option>--- Chọn Quận/Huyện ---</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Diện tích:
+                </label>
+                <input name="dien-tich" class="dien-tich" />
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Giá tiền:
+                </label>
+                <input name="gia" class="gia" />
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Chiều dài
+                </label>
+                <input name="chieu-dai" />
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Chiều rộng
+                </label>
+                <input name="chieu-rong" />
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Hướng
+                </label>
+                <select name="huong">
+                    <option>--- Chọn Hướng ---</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label>
+                    Pháp lý
+                </label>
+                <select name="phap-ly" >
+                    <option>--- Chọn Pháp lý ---</option>
+                </select>
+            </div>
+
+            <?php wp_nonce_field('post_nonce', 'post_nonce_field');
             ?>
-            <form method="post" class="form-horizontal" action="" enctype="multipart/form-data">
-                <div class="form-group col-sm-12 col-md-6">
-                    <label for="post_title">
-                        Tiêu đề:
-                    </label>
-                    <input type="text" name="post_title" class="form-control" placeholder="Tiêu đề" />
+            <div class="form-group">
+                <div class="col-sm-12" style="padding-left:0;">
+                    <input type="hidden" name="post_type" value="dang-tin"/>
+                    <button type="submit" class="btn btn-primary">Đăng Bài</button>
                 </div>
-                <div class="form-group col-sm-12 col-md-6">
-                    <label for="post_content">
-                        Nội dung 
-                    </label>
-                    <?php wp_editor('', 'mycustomeditor', array('textarea_name' => 'post_content', 'media_buttons' => false, 'quicktags' => false)); ?>
-                </div>
-                <div class="form-group col-sm-12 col-md-6">
-                    <label>
-                        Tỉnh/Thành phố
-                    </label>
-                    <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp">
-                        <option>--- Chọn Tỉnh/Thành ---</option>
-                        <?php foreach ($categories as $cate) { ?>
-                            <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-                <div class="form-group col-sm-12 col-md-6">
-                    <label>
-                        Quận/Huyện:
-                    </label>
-                    <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan">
-                        <option>--- Chọn Quận/Huyện ---</option>
-                    </select>
-                </div>
-                <?php wp_nonce_field('post_nonce', 'post_nonce_field');
-                ?>
-                <div class="form-group">
-                    <div class="col-sm-12" style="padding-left:0;">
-                        <button type="submit" class="btn btn-primary">Đăng Bài</button>
-                    </div>
-                </div>
-            </form>
-            <?php
-        }
+            </div>
+        </form>
+        <?php
     } else {
         wp_redirect(home_url() . "/login-4");
         exit;
@@ -112,5 +140,33 @@ function get_quan_huyen() {
         ?>
         <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
         <?php
+    }
+}
+
+add_action('do_post_dang_tin', 'save_dang_tin');
+
+function save_dang_tin() {
+
+    if (isset($_POST) && isset($_POST['post_nonce_field']) && wp_verify_nonce($_POST['post_nonce_field'], 'post_nonce')) {
+        $post_title = $_POST['post_title'];
+        $post_content = $_POST['post_content'];
+        $post_type = $_POST['post_type'];
+        $post_tp = $_POST['post_tp'];
+        $post_quan = $_POST['post_quan'];
+        $post_dientich = $_POST['dien-tich'];
+        $post_gia = $_POST['gia'];
+        $post_rong = $_POST['chieu-rong'];
+        $post_dai = $_POST['dien-dai'];
+        $post_huong = $_POST['huong'];
+        $post_phaply = $_POST['phap-ly'];
+        $post_data = array(
+            'post_title' => wp_strip_all_tags($post_title),
+            'post_content' => $post_content,
+            'post_status' => 'publish',
+            'post_type' => $post_type,
+            'post_author' => $user_id
+        );
+        $post_id = wp_insert_post($post_data);
+        echo '<div class="alert alert-success"><strong>Bạn đã đăng bài thành công!</strong></div>';
     }
 }
