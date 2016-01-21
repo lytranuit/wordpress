@@ -4,12 +4,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/js/custom.js</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/single.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/widget-function.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-widgets.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/widgets/widget-recent-post.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/header.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-custom-functions.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-customizer.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/js/custom.js</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-template-tags.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-includes/theme.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/js/customizer.js</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/header.php</file>
         </group>
     </open-files>
 </project-private>

@@ -4,21 +4,21 @@
  *
  * @package Hamza Lite
  */
-add_action('widgets_init', 'hamza_lite_register_recent_post_widget');
+add_action('widgets_init', 'custom_theme_register_recent_post_widget');
 
-function hamza_lite_register_recent_post_widget() {
-    register_widget('hamza_lite_recent_post');
+function custom_theme_register_recent_post_widget() {
+    register_widget('custom_theme_recent_post');
 }
 
-class Hamza_Lite_Recent_Post extends WP_Widget {
+class Custom_Theme_Recent_Post extends WP_Widget {
 
     /**
      * Register widget with WordPress.
      */
     public function __construct() {
         parent::__construct(
-                'hamza_lite_recent_post', __('Tin tức', 'hamza-lite'), array(
-            'description' => __('Những Tin tức', 'hamza-lite')
+                'hamza_lite_recent_post', __('8D : Hamza Lite Recent Posts', 'hamza-lite'), array(
+            'description' => __('A widget that shows recent posts of selected category', 'hamza-lite')
                 )
         );
     }

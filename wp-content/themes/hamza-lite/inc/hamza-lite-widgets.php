@@ -46,20 +46,9 @@ require get_template_directory() . '/inc/widgets/widget-fields.php';
  */
 require get_template_directory() . '/inc/widgets/widget-recent-post.php';
 
-/**
- * Register Recent Portfolio Widget
- *
- */
-require get_template_directory() . '/inc/widgets/widget-recent-portfolio.php';
 
 /**
  * Register Featured Post Widget
  *
  */
 require get_template_directory() . '/inc/widgets/widget-featured-post.php';
-
-/**
- * Register Flickr Stream Widget
- *
- */
-require get_template_directory() . '/inc/widgets/widget-flickr-stream.php';

@@ -19,7 +19,7 @@ class Hamza_Lite_Featured_Post extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'hamza_lite_featured_post',
-			__( 'Bài Post', 'hamza-lite' ),
+			__( '8D : Hamza Lite Featured Post', 'hamza-lite' ),
 			array(
 				'description'	=> __( 'A widget that shows featued post.', 'hamza-lite' )
 			)
