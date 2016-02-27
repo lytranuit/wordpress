@@ -23,7 +23,7 @@
     <body <?php body_class(); ?>>
 
         <div id="page" class="site">
-            <header id="masthead" class="site-header">
+            <header id="masthead" class="site-header" style="box-shadow: none;">
                 <div id="top-header">
                     <div class="ak-container">
 
@@ -112,19 +112,86 @@
                     </div><!-- .ak-container -->
                 </div><!-- #top-header -->
             </header><!-- #masthead -->
-
-            <section id="slider-banner">
-                <div class="ak-container">
-                    <div class="slider-wrap">
-                        <?php
-                        if (is_home() || is_front_page()) {
-                            do_action('hamza_lite_bxslider');
-                        }
-                        ?>
+            <?php if (is_home() || is_front_page()) { ?>
+                <section id="slider-banner">
+                    <div class="ak-container">
+                        <div class="slider-wrap" style="width: 68.69%;display: inline-block;">
+                            <?php do_action('hamza_lite_bxslider'); ?>
+                        </div>
+                        <div class="search-box" style="    display: inline-block;
+                             display: inline-block;
+                             width: 28.29%;
+                             vertical-align: top;
+                             margin-top: 20px;
+                             padding: 20px;
+                             min-height: 353px;
+                             float: right;
+                             position: relative;
+                             border: 1px solid gray;">
+                            <label class='title' style="position: absolute;
+                                   top: -20px;
+                                   display: inline-block;
+                                   text-align: center;
+                                   /* width: 100%; */
+                                   left: 34%;
+                                   background: white;
+                                   font-size: 20px;
+                                   color: green;
+                                   font-family: serif;
+                                   padding: 0px 5px;">Tìm ngay</label>
+                            <form class="form-search">
+                                <div>
+                                    <span>Khu vực</span><select>
+                                        <option value="">Q1</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span>Diện tích</span>
+                                    <select>
+                                        <option value="">100m2</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span>Hướng</span>
+                                    <select>
+                                        <option value="">Đông Nam</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span>Mức giá</span>
+                                    <select>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <button>Tìm kiếm</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section><!-- #slider-banner -->
-
+                </section><!-- #slider-banner -->
+                <style>
+                    body{
+                        font-family: Arial,Verdana,sans-serif !important;
+                    }
+                    h1, h2, h3, h4, h5, h6{
+                        font-family: Arial,Verdana,sans-serif !important;
+                    }
+                    .form-search div{
+                        margin: 0px 0px 12px;
+                    }
+                    .form-search span{
+                        font-size: 15px;
+                    }
+                    .form-search select{
+                        width: 100%;
+                    }
+                    .form-search button{
+                        width: 100%;
+                    }
+                    .flex-direction-nav a{
+                        color:transparent;
+                    }
+                </style>
+            <?php } ?>
 
             <?php
             if ((is_home() || is_front_page()) && 'page' == get_option('show_on_front')) {
