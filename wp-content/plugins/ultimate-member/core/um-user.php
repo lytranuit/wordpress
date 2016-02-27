@@ -57,7 +57,7 @@ class UM_User {
 	function community_role_edit( $user ) {
 		global $ultimatemember;
 		if ( current_user_can( 'edit_users' ) && current_user_can( 'edit_user', $user->ID ) ) {
-			$user = get_userdata( $user->ID );
+			um_fetch_user(  $user->ID );
 			?>
 			<table class="form-table">
 				<tbody>
@@ -274,25 +274,6 @@ class UM_User {
 	}
 	
 	/***
-	***	@Security check for roles
-	***/
-	function is_secure_role( $user_id, $role ) {
-		
-		if ( is_admin() ) return;
-		
-		if ( $role == 'admin' ) {
-			$this->delete( false );
-			wp_die( __('This is not allowed for security reasons.','ultimatemember') );
-		}
-		
-		if ( um_get_option('advanced_denied_roles') && strstr( um_get_option('advanced_denied_roles'), $role ) ) {
-			$this->delete( false );
-			wp_die( __('This is not allowed for security reasons.','ultimatemember') );
-		}
-		
-	}
-	
-	/***
 	***	@Clean user profile
 	***/
 	function clean(){
@@ -365,6 +346,13 @@ class UM_User {
 	function set_plain_password( $plain ) {
 		update_user_meta( $this->id, '_um_cool_but_hard_to_guess_plain_pw', $plain );
 	}
+
+	/**
+	 * Set last login for new registered users
+	 */
+	function set_last_login(){
+		update_user_meta(  $this->id, '_um_last_login', current_time( 'timestamp' ) );
+	}
 	
 	function set_role( $role ){
 		
@@ -434,6 +422,15 @@ class UM_User {
 		$this->password_reset_hash();
 		$ultimatemember->mail->send( um_user('user_email'), 'resetpw_email' );
 	}
+
+	
+	/***
+	***	@password changed email
+	***/
+	function password_changed(){
+		global $ultimatemember;
+		$ultimatemember->mail->send( um_user('user_email'), 'changedpw_email' );
+	}
 	
 	/**
 	 * @function approve()
@@ -481,7 +478,7 @@ class UM_User {
 	/***
 	***	@pending email
 	***/
-	function email_pending(){
+	function email_pending() {
 		global $ultimatemember;
 		$this->assign_secretkey();
 		$this->set_status('awaiting_email_confirmation');
@@ -877,6 +874,7 @@ class UM_User {
 			return count( $duplicates );
 		return false;
 	}
+
 	
 	/***
 	***	@user exists by name
@@ -885,12 +883,14 @@ class UM_User {
 	
 		global $ultimatemember;
 		$value = $ultimatemember->validation->safe_name_in_url( $value );
-		
+		$value = um_clean_user_basename( $value );
+
 		$ids = get_users(array( 'fields' => 'ID', 'meta_key' => 'full_name','meta_value' => $value ,'meta_compare' => '=') );
 		if ( isset( $ids[0] ) ) 
 			return $ids[0];
 		return false;
 	}
+
 	
 	/**
 	 * @function user_exists_by_id()

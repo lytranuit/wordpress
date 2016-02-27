@@ -34,32 +34,45 @@
 	function um_add_user_frontend($args){
 		global $ultimatemember;
 		extract($args);
-
-		if ( isset( $user_email ) && !isset($user_login) ) {
-			$user_login = $user_email;
-		}
 		
+
 		if ( isset( $username ) && !isset($args['user_login']) ) {
 			$user_login = $username;
+		}
+
+		if ( ! empty( $first_name ) &&  ! empty( $last_name ) && ! isset( $user_login ) ) {
+
+			if ( um_get_option('permalink_base') == 'name' ) {
+				$user_login = rawurlencode( strtolower( str_replace(" ",".",$first_name." ".$last_name ) ) );
+			}else if ( um_get_option('permalink_base') == 'name_dash' ) {
+				$user_login = rawurlencode( strtolower( str_replace(" ","-",$first_name." ".$last_name ) ) );
+			}else if ( um_get_option('permalink_base') == 'name_plus' ) {
+				$user_login = strtolower( str_replace(" ","+",$first_name." ".$last_name ) );
+			}else{
+				$user_login = strtolower( str_replace(" ","",$first_name." ".$last_name ) );
+			}
+
+		}
+
+		$unique_userID = $ultimatemember->query->count_users() + 1;
+		
+		if ( ! isset( $user_login ) ) {
+			$user_login = 'user' . $unique_userID;
 		}
 
 		if ( isset( $username ) && is_email( $username ) ) {
 			$user_email = $username;
 		}
 
-		if (!isset($user_password)){
+		if ( ! isset( $user_password ) ){
 			$user_password = $ultimatemember->validation->generate();
 		}
 		
-		$unique_userID = $ultimatemember->query->count_users() + 1;
 		
-		if( !isset($user_email) ) {
+		if( ! isset( $user_email ) ) {
 			$user_email = 'nobody' . $unique_userID . '@' . get_bloginfo('name');
 		}
-		
-		if ( !isset( $user_login ) ) {
-			$user_login = 'user' . $unique_userID;
-		}
+
 		
 		$creds['user_login'] = $user_login;
 		$creds['user_password'] = $user_password;
@@ -67,7 +80,8 @@
 	
 		$args['submitted'] = array_merge( $args['submitted'], $creds);
 		$args = array_merge($args, $creds);
-		
+	
+
 		do_action('um_before_new_user_register', $args);
 		
 		$user_id = wp_create_user( $user_login, $user_password, $user_email );
@@ -91,13 +105,17 @@
 			$role = um_get_option('default_role');
 		}
 		
-		$ultimatemember->user->is_secure_role( $user_id, $role );
+		if ( !in_array( $role, $ultimatemember->query->get_roles( false, array('admin') ) ) ) {
+			$role = um_get_option('default_role');
+		}
 
 		$ultimatemember->user->set_role( $role );
 		
 		$ultimatemember->user->set_registration_details( $args['submitted'] );
 		
 		$ultimatemember->user->set_plain_password( $args['user_password'] );
+
+		$ultimatemember->user->set_last_login();
 		
 		do_action('um_new_user_registration_plain');
 		
@@ -157,6 +175,11 @@
 		
 			do_action("track_{$status}_user_registration");
 			
+			// Priority redirect
+			if ( isset( $args['redirect_to'] ) ) {
+				exit( wp_redirect( $args['redirect_to'] ) );
+			}
+			
 			if ( $status == 'approved' ) {
 				
 				$ultimatemember->user->auto_login($user_id);
@@ -172,9 +195,10 @@
 				}
 				
 				if ( um_user( $status . '_action' ) == 'show_message' && um_user( $status . '_message' ) != '' ) {
-					$url = um_get_core_page('register');
+					$url = $ultimatemember->permalinks->get_current_url();
 					$url =  add_query_arg( 'message', esc_attr( $status ), $url );
 					$url =  add_query_arg( 'uid', esc_attr( um_user('ID') ), $url );
+
 					exit( wp_redirect( $url ) );
 				}
 				
@@ -212,7 +236,7 @@
 	***	@Register user with predefined role in options
 	***/
 	add_action('um_after_register_fields', 'um_add_user_role');
-	function um_add_user_role($args){
+	function um_add_user_role( $args ){
 		
 		global $ultimatemember;
 		

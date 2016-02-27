@@ -202,8 +202,10 @@ function hamza_lite_scripts() {
     wp_enqueue_script('hamza-lite-bx-slider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '4.1', true);
     wp_enqueue_script('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array('jquery'), '2.1', true);
     wp_enqueue_script('hamza-lite-jquery-actual', get_template_directory_uri() . '/js/jquery.actual.min.js', array('jquery'), '1.0.16', true);
+    wp_enqueue_script('clamp', get_template_directory_uri() . '/js/clamp.js', array('jquery'), '1.0.16', true);
     wp_enqueue_script('hamza-lite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
-
+    wp_enqueue_script('TweenMax', get_template_directory_uri() . '/js/animate-scroll-master/TweenMax.js', array(), '1.0.16', true);
+    wp_enqueue_script('animate-scroll', get_template_directory_uri() . '/js/animate-scroll-master/animate-scroll.js', array(), '1.0.16', true);
     wp_register_script('hamza-lite-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.1', true);
 
     $hamza_lite_slider_control_option = get_theme_mod('hamza_lite_slider_control_option', 'true');
@@ -623,8 +625,8 @@ function hamza_lite_truncate($hamza_lite_text, $hamza_lite_length = 100, $hamza_
 function hamza_lite_fonts_url() {
     $hamza_lite_fonts_url = '';
 
-    $hamza_lite_bodytype = get_theme_mod('hamza_lite_body_text', 'Titillium Web');
-    $hamza_lite_headtype = get_theme_mod('hamza_lite_header_font', 'Titillium Web');
+    $hamza_lite_bodytype = get_theme_mod('hamza_lite_body_text', 'Arial');
+    $hamza_lite_headtype = get_theme_mod('hamza_lite_header_font', 'Arial');
     $hamza_lite_font_var = '300,400,600,700,900,300italic,400italic,600italic,700italic,900italic';
 
     $hamza_lite_fonts = array();
@@ -675,46 +677,7 @@ function hamza_lite_fonts_url() {
 /* Add Typograpy and Google web fonts */
 
 function hamza_lite_googlefont_cb() {
-
-    $hamza_lite_un_bodytype = get_theme_mod('hamza_lite_body_text', 'Titillium Web');
-    $hamza_lite_un_headtype = get_theme_mod('hamza_lite_header_font', 'Titillium Web');
-    $hamza_lite_heading_font_weight = get_theme_mod('hamza_lite_header_font_weight', '700');
-    $hamza_lite_body_font_weight = get_theme_mod('hamza_lite_body_text_weight', '400');
-    $hamza_lite_h1_font_size = get_theme_mod('hamza_lite_h1_font_size', '26');
-    $hamza_lite_h1_text_transform = get_theme_mod('hamza_lite_h1_text_transform', 'uppercase');
-    $hamza_lite_h1_font_color = get_theme_mod('hamza_lite_h1_color', '#333333');
-    $hamza_lite_h2_font_size = get_theme_mod('hamza_lite_h2_font_size', '24');
-    $hamza_lite_h2_text_transform = get_theme_mod('hamza_lite_h2_text_transform', 'uppercase');
-    $hamza_lite_h2_font_color = get_theme_mod('hamza_lite_h2_color', '#4b4b4b');
-    $hamza_lite_h3_font_size = get_theme_mod('hamza_lite_h3_font_size', '22');
-    $hamza_lite_h3_text_transform = get_theme_mod('hamza_lite_h3_text_transform', 'none');
-    $hamza_lite_h3_font_color = get_theme_mod('hamza_lite_h3_color', '#333333');
-    $hamza_lite_h4_font_size = get_theme_mod('hamza_lite_h4_font_size', '20');
-    $hamza_lite_h4_text_transform = get_theme_mod('hamza_lite_h4_text_transform', 'none');
-    $hamza_lite_h4_font_color = get_theme_mod('hamza_lite_h4_color', '#333333');
-    $hamza_lite_h5_font_size = get_theme_mod('hamza_lite_h5_font_size', '18');
-    $hamza_lite_h5_text_transform = get_theme_mod('hamza_lite_h5_text_transform', 'uppercase');
-    $hamza_lite_h5_font_color = get_theme_mod('hamza_lite_h5_color', '#333333');
-    $hamza_lite_h6_font_size = get_theme_mod('hamza_lite_h6_font_size', '16');
-    $hamza_lite_h6_text_transform = get_theme_mod('hamza_lite_h6_text_transform', 'none');
-    $hamza_lite_h6_font_color = get_theme_mod('hamza_lite_h6_color', '#333333');
-    $hamza_lite_body_font_size = get_theme_mod('hamza_lite_body_font_size', '14');
-    $hamza_lite_body_font_color = get_theme_mod('hamza_lite_body_color', '#212121');
-    ?>
-
-    <?php echo "<style type='text/css' media='all'>"; ?>
-    body { font-family: <?php echo esc_attr($hamza_lite_un_bodytype); ?>; font-weight:<?php echo absint($hamza_lite_body_font_weight); ?>; }
-    h1,h2,h3,h4,h5,h6 { font-family: <?php echo esc_attr($hamza_lite_un_headtype); ?>; font-weight:<?php echo absint($hamza_lite_heading_font_weight); ?>; }
-    h1{font-size:<?php echo absint($hamza_lite_h1_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h1_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h1_font_color); ?>;}
-    h2{font-size:<?php echo absint($hamza_lite_h2_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h2_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h2_font_color); ?>;}
-    h3{font-size:<?php echo absint($hamza_lite_h3_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h3_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h3_font_color); ?>;}
-    h4{font-size:<?php echo absint($hamza_lite_h4_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h4_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h4_font_color); ?>;}
-    h5{font-size:<?php echo absint($hamza_lite_h5_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h5_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h5_font_color); ?>;}
-    h6{font-size:<?php echo absint($hamza_lite_h6_font_size); ?>px;text-transform:<?php echo esc_attr($hamza_lite_h6_text_transform); ?>;color:<?php echo hamza_lite_sanitize_hex_color($hamza_lite_h6_font_color); ?>;}
-    body{font-size:<?php echo absint($hamza_lite_body_font_size); ?>px;color:<?php echo ($hamza_lite_body_font_color); ?>;}	
-    <?php echo "</style>"; ?>
-
-    <?php
+    
 }
 
 add_action('wp_head', 'hamza_lite_googlefont_cb');

@@ -1270,7 +1270,7 @@ function hamza_lite_customizer($hamza_lite_customize) {
 
     $hamza_lite_customize->add_setting(
             'hamza_lite_header_font', array(
-        'default' => 'Titillium Web',
+        'default' => 'Arial,Verdana,sans-serif',
         'sanitize_callback' => 'hamza_lite_sanitize_select',
             )
     );
@@ -1309,7 +1309,7 @@ function hamza_lite_customizer($hamza_lite_customize) {
 
     $hamza_lite_customize->add_setting(
             'hamza_lite_body_text', array(
-        'default' => 'Titillium Web',
+        'default' => 'Arial,Verdana,sans-serif ',
         'sanitize_callback' => 'hamza_lite_sanitize_select',
             )
     );

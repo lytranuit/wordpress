@@ -103,7 +103,6 @@ input,
 select,
 textarea {
     color: #444;
-    font-family: "Titillium Web";
     font-size: 15px;
     line-height: 1.8;
     font-weight: 300;
@@ -527,8 +526,7 @@ h1.entry-title a{
 .page-content,
 .entry-content,
 .entry-summary {
-    color: #a1a8af;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 23px;
     margin: 15px 0 0;
 }
@@ -1203,7 +1201,6 @@ Slider
 
 .slider-caption .caption-title {
     display: inline-block;
-    font-family: "Titillium Web";
     font-size: 37px !important;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1230,7 +1227,6 @@ Slider
 .slider-caption .caption-description {
     color: #4b4b4b !important;
     display: inline-block;
-    font-family: "Titillium Web";
     font-size: 18px !important;
     font-weight: 100 !important;
     line-height: 24px;
@@ -1257,7 +1253,6 @@ Slider
     border: 2px solid #52b680;
     border-radius: 3px;
     color: #222222;
-    font-family: "Titillium Web";
     font-size: 18px !important;
     font-weight: 400;
     padding: 12px 40px;
@@ -1323,7 +1318,6 @@ header.site-header {
 }
 
 .main-logo h1 {
-    font-family: 'Titillium Web';
     font-size: 30px;
     font-weight: 700;
     line-height: 1;
@@ -1379,7 +1373,6 @@ header.site-header {
     border: medium none;
     color: #4b4c4b;
     float: left;
-    font-family: "Titillium Web";
     font-size: 14px;
     height: 32px;
     padding: 5px 10px;
@@ -1453,7 +1446,6 @@ header.site-header {
     color: #000;
     padding: 5px 23px 15px 23px;
     display: inline-block;
-    font-family: 'Titillium Web';
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -1676,29 +1668,16 @@ TOP-FOOTER
     color: #9b9999;
 }
 
-#top-footer .footer .widget{
-    margin-bottom: 0;
-    margin-right: 25px;
-}
 #top-footer .aptf-tweet-content{
     line-height: 20px;
     color: #000;
     font-size: 13px;
 }
-#top-footer .footer4 .widget{
-    margin-right: 0;
-    background: none;
-    padding-right: 0;
+#top-footer .footer{
+    width: 32%;
 }
-#top-footer .footer1.footer .widget{
-    margin-right: 0px;
-}
-#top-footer .footer1{
-    width: 23%;
-    margin-right: 2%;
-}
-#top-footer .footer2, #top-footer .footer3, #top-footer .footer4{
-    width: 25%;
+#top-footer .footer .widget{
+    margin: 0px 10px;
 }
 #top-footer .footer .widget-title{
     color:#4e4c4c;
@@ -1738,7 +1717,6 @@ TOP-FOOTER
     padding: 10px;
     margin-right: 10px;
     width: 73%;
-    font-family: "Titillium Web";
     font-weight: bold;
     font-size: 16px;
 }
@@ -2958,7 +2936,6 @@ footer#colophon {
     border-radius: 3px;
     border: 1px solid #777777;
     height: 50px;
-    font-family: "Titillium Web";
 }
 .map-form div.wpcf7 textarea{
     height: 160px;
@@ -3583,4 +3560,36 @@ CSS Login
     vertical-align: middle;
     font-size: 20px;
     z-index: 66;
+}
+
+.home article.hentry .entry-thumbnail img{
+    width: 150px;
+    height: auto;
+}
+.home article.hentry p{
+    font-size: 12px;
+}
+.home article.hentry {
+    display: inline-block;
+    width:49%;
+    vertical-align: top;
+}
+.details-wp{
+    margin: 10px 0px;
+}
+.details-wp label{
+    font-weight: 600;
+}
+.details-wp span{
+    color:red;
+}
+.dtich{
+    display:inline-block;
+    margin-right: 10%;
+}
+.gia{
+    display:inline-block;
+}
+.diachi{
+
 }

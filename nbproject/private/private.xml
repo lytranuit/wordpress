@@ -3,25 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/xampp/htdocs/wordpress/wp-includes/plugin.php</file>
-            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/header.php</file>
-=======
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/footer.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/functions.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/template-parts/content.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/style.css</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/js/custom.js</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/single.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/widget-function.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-widgets.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/widgets/widget-recent-post.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/header.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-custom-functions.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-customizer.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/js/custom.js</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/inc/hamza-lite-template-tags.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-includes/theme.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/js/customizer.js</file>
->>>>>>> 925adcd45d7bc1aeeebbc5dfaff82bd74a328eb3
         </group>
     </open-files>
 </project-private>
