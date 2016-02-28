@@ -187,13 +187,8 @@ add_action('widgets_init', 'hamza_lite_widgets_init');
  */
 function hamza_lite_scripts() {
     // Add custom fonts, for typography
-    wp_enqueue_style('hamza-lite-fonts', hamza_lite_fonts_url(), array(), null);
-
-    $hamza_lite_query_args = array(
-        'family' => 'Open+Sans:400,400italic,300italic,300,600,600italic|Lato:400,100,300,700|Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic|Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900',
-    );
     wp_enqueue_style('hamza-lite-font', get_template_directory_uri() . '/css/fonts.css');
-    wp_enqueue_style('hamza-lite-google-fonts', add_query_arg($hamza_lite_query_args, "//fonts.googleapis.com/css"));
+    wp_enqueue_style('hamza-lite-google-fonts', "https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900");
     wp_enqueue_style('hamza-lite-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_enqueue_style('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css');
     wp_enqueue_style('hamza-lite-bxslider-style', get_template_directory_uri() . '/css/flexslider.css');
@@ -619,59 +614,6 @@ function hamza_lite_truncate($hamza_lite_text, $hamza_lite_length = 100, $hamza_
     }
 
     return $hamza_lite_truncate;
-}
-
-/** Function that gives google font url */
-function hamza_lite_fonts_url() {
-    $hamza_lite_fonts_url = '';
-
-    $hamza_lite_bodytype = get_theme_mod('hamza_lite_body_text', 'Arial');
-    $hamza_lite_headtype = get_theme_mod('hamza_lite_header_font', 'Arial');
-    $hamza_lite_font_var = '300,400,600,700,900,300italic,400italic,600italic,700italic,900italic';
-
-    $hamza_lite_fonts = array();
-    $hamza_lite_subsets = 'latin,latin-ext';
-
-    /*
-     * Translators: If there are characters in your language that are not supported
-     * by Noto Sans, translate this to 'off'. Do not translate into your own language.
-     */
-    if ('off' !== _x('on', "Body Font: on or off", 'hamza-lite')) {
-        $hamza_lite_fonts[] = $hamza_lite_bodytype . ':' . $hamza_lite_font_var;
-    }
-
-    /*
-     * Translators: If there are characters in your language that are not supported
-     * by Noto Serif, translate this to 'off'. Do not translate into your own language.
-     */
-    if ('off' !== _x('on', "Header Font: on or off", 'hamza-lite')) {
-        $hamza_lite_fonts[] = $hamza_lite_headtype . ':' . $hamza_lite_font_var;
-    }
-
-    /*
-     * Translators: To add an additional character subset specific to your language,
-     * translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
-     */
-    $hamza_lite_subset = _x('no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'hamza-lite');
-
-    if ('cyrillic' == $hamza_lite_subset) {
-        $hamza_lite_subsets .= ',cyrillic,cyrillic-ext';
-    } elseif ('greek' == $hamza_lite_subset) {
-        $hamza_lite_subsets .= ',greek,greek-ext';
-    } elseif ('devanagari' == $hamza_lite_subset) {
-        $hamza_lite_subsets .= ',devanagari';
-    } elseif ('vietnamese' == $hamza_lite_subset) {
-        $hamza_lite_subsets .= ',vietnamese';
-    }
-
-    if ($hamza_lite_fonts) {
-        $hamza_lite_fonts_url = add_query_arg(array(
-            'family' => urlencode(implode('|', $hamza_lite_fonts)),
-            'subset' => urlencode($hamza_lite_subsets),
-                ), '//fonts.googleapis.com/css');
-    }
-
-    return $hamza_lite_fonts_url;
 }
 
 /* Add Typograpy and Google web fonts */

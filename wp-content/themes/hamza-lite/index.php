@@ -15,7 +15,7 @@ get_header();
 <section class="ak-container" id="ak-blog-post">
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-
+            <h2 class="widget-title">Bất động sản mới</h2>
             <?php
             $args = array(
                 'post_type' => 'dang-tin'
@@ -26,7 +26,7 @@ get_header();
 
                 <?php /* Start the Loop */ ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                
+
                     <?php
                     /* Include the Post-Format-specific template for the content.
                      * If you want to override this in a child theme, then include a file
@@ -52,8 +52,7 @@ get_header();
 </section>
 <script>
     jQuery(function ($) {
-        $('.home article.hentry h2 a').each(function (index, element) {
-            console.log(element);
+        $('.home article.hentry a.title-entry').each(function (index, element) {
             $clamp(element, {clamp: 2});
         });
         $(document).animateScroll();

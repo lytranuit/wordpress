@@ -52,6 +52,8 @@ html {
 }
 body {
     background: #fff;
+    font-family: 'Raleway', sans-serif;
+    background: #eeeeee;
 }
 article,
 aside,
@@ -114,9 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 15px;
     color: #555;
     font-weight: 300;
-}
-p {
-    margin-bottom:20px;
+    font-family: Arial,Verdana,sans-serif;
 }
 b, strong {
     font-weight: bold;
@@ -2642,7 +2642,6 @@ article.cat-blog-list {
     color: #52b680;
 }
 .single .entry-content, .cat-blog-list .entry-exrecpt {
-    color: #a1a8af;
     font-size: 17px;
     line-height: 23px;
 }
@@ -3141,7 +3140,7 @@ RIGHT-SIDEBAR
     display: block;
     font-weight: 400;
 }
-.sidebar .widget-title {
+.widget-title {
     border-bottom: 1px solid #e5e5e5;
     border-left: 3px solid #29bb9c;
     color: #4c4c4c;
@@ -3573,12 +3572,18 @@ CSS Login
     display: inline-block;
     width:49%;
     vertical-align: top;
+    margin-right: 5px;
+}
+a.title-entry{
+    font-weight: bold;
+    font-size: 15px;
+    
 }
 .details-wp{
     margin: 10px 0px;
 }
 .details-wp label{
-    font-weight: 600;
+    font-weight: 700;
 }
 .details-wp span{
     color:red;

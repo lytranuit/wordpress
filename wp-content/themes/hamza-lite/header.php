@@ -134,7 +134,7 @@
                                    text-align: center;
                                    /* width: 100%; */
                                    left: 34%;
-                                   background: white;
+                                   background: #eeeeee;
                                    font-size: 20px;
                                    color: green;
                                    font-family: serif;
@@ -169,12 +169,6 @@
                     </div>
                 </section><!-- #slider-banner -->
                 <style>
-                    body{
-                        font-family: Arial,Verdana,sans-serif !important;
-                    }
-                    h1, h2, h3, h4, h5, h6{
-                        font-family: Arial,Verdana,sans-serif !important;
-                    }
                     .form-search div{
                         margin: 0px 0px 12px;
                     }

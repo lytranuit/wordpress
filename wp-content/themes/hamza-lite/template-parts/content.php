@@ -101,7 +101,7 @@ $cat = wp_get_post_terms($post->ID, 'khu-vuc', array("fields" => "all"));
         <?php } ?>
         <div class="entry-exrecpt">
             <div class="short-content clearfix">
-                <h2 style="display: inline;font-size: 15px;text-transform: none;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <a href="<?php the_permalink(); ?>" class="title-entry"><?php the_title(); ?></a>
                 <div class="details-wp">
                     <div class="dtich">
                         <label>
