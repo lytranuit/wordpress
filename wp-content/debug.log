@@ -22,3 +22,48 @@
 [27-Feb-2016 12:41:15 UTC] PHP Fatal error:  Cannot use object of type WP_Term as array in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 121
 [27-Feb-2016 12:41:26 UTC] PHP Fatal error:  Cannot use object of type WP_Term as array in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 121
 [27-Feb-2016 12:42:16 UTC] PHP Fatal error:  Cannot use object of type WP_Term as array in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 04:43:31 UTC] PHP Notice:  Undefined variable: post in F:\htdocs\wordpress\wp-content\plugins\custom-theme\custom-theme.php on line 135
+[28-Feb-2016 04:43:31 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\custom-theme\custom-theme.php on line 135
+[28-Feb-2016 10:17:35 UTC] PHP Notice:  Undefined variable: post in F:\htdocs\wordpress\wp-content\plugins\custom-theme\custom-theme.php on line 135
+[28-Feb-2016 10:17:35 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\custom-theme\custom-theme.php on line 135
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Undefined offset: 0 in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Undefined offset: 0 in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Undefined offset: 0 in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Undefined offset: 0 in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Undefined offset: 0 in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:25:49 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 124
+[28-Feb-2016 10:46:03 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:46:03 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:46:03 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:46:19 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:46:19 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:46:19 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:47:59 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:47:59 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:47:59 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:48:15 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:48:15 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:48:15 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:52:08 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in F:\htdocs\wordpress\wp-includes\update.php on line 303
+[28-Feb-2016 10:53:06 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in F:\htdocs\wordpress\wp-includes\update.php on line 467
+[28-Feb-2016 10:53:33 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in F:\htdocs\wordpress\wp-includes\update.php on line 303
+[28-Feb-2016 10:58:07 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:07 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:07 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:21 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:21 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:21 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:28 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:28 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 10:58:28 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:00:48 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:00:48 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:00:48 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:01:08 UTC] PHP Notice:  Undefined index: acf in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:01:08 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 11:01:08 UTC] PHP Notice:  Trying to get property of non-object in F:\htdocs\wordpress\wp-content\plugins\advanced-access-manager\Application\Backend\view\object\metabox.phtml on line 37
+[28-Feb-2016 15:26:32 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in F:\htdocs\wordpress\wp-includes\class-wp-http-curl.php on line 240

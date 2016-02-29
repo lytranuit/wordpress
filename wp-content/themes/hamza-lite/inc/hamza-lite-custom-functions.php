@@ -193,7 +193,6 @@ function hamza_lite_scripts() {
     wp_enqueue_style('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css');
     wp_enqueue_style('hamza-lite-bxslider-style', get_template_directory_uri() . '/css/flexslider.css');
     wp_enqueue_style('hamza-lite-style', get_stylesheet_uri(), array(), '1.0');
-
     wp_enqueue_script('hamza-lite-bx-slider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '4.1', true);
     wp_enqueue_script('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array('jquery'), '2.1', true);
     wp_enqueue_script('hamza-lite-jquery-actual', get_template_directory_uri() . '/js/jquery.actual.min.js', array('jquery'), '1.0.16', true);

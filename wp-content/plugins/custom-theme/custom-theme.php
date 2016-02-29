@@ -21,7 +21,7 @@ add_shortcode('form_dang_tin', 'create_form_dang_tin');
 function create_form_dang_tin() {
     global $wp_query;
     if (is_user_logged_in()) {
-
+        wp_enqueue_media();
         $user_id = get_current_user_id();
         $current_user = wp_get_current_user();
         do_action('do_post_dang_tin');
@@ -34,100 +34,116 @@ function create_form_dang_tin() {
             'parent' => 0
         );
         $khuvuc = get_terms($taxonomies, $args);
+        //wp_enqueue_style('bosstrap', plugins_url('css/bootstrap.css', __FILE__), array("hamza-lite-style"), '1.0');
         wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
         ?>
-        <form method="POST" class="form-horizontal" action="">
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="post_titles">
-                    Tiêu đề:
-                </label>
-                <input type="text" name="post_titles" class="form-control" placeholder="Tiêu đề" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label for="post_contents">
-                    Nội dung 
-                </label>
-                <textarea name="post_contents"></textarea>
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Tỉnh/Thành phố
-                </label>
-                <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp">
-                    <option value="0">--- Chọn Tỉnh/Thành ---</option>
-                    <?php foreach ($khuvuc as $cate) { ?>
-                        <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
-                    <?php } ?>
-                </select>
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Quận/Huyện:
-                </label>
-                <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan">
-                    <option value="0">--- Chọn Quận/Huyện ---</option>
-                </select>
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Địa chỉ
-                </label>
-                <input name="diachi" class="diachi" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Diện tích:
-                </label>
-                <input name="dientich" class="dien-tich" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Giá tiền:
-                </label>
-                <input name="gia_ban" class="gia" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Chiều dài
-                </label>
-                <input name="chieudai" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Chiều rộng
-                </label>
-                <input name="chieurong" />
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Hướng
-                </label>
-                <select name="huong">
-                    <option value="0">--- Chọn Hướng ---</option>
-                    <option value="1">Đông</option>
-                    <option value="2">Tây</option>
-                    <option value="3">Nam</option>
-                    <option value="4">Bắc</option>
-                    <option value="5">Đông Nam</option>
-                    <option value="6">Đông Bắc</option>
-                    <option value="7">Tây Nam</option>
-                    <option value="8">Tây Bắc</option>
-                </select>
-            </div>
-            <div class="form-group col-sm-12 col-md-6">
-                <label>
-                    Pháp lý
-                </label>
-                <select name="phaply" >
-                    <option value="0">--- Chọn Pháp lý ---</option>
-                    <option value="1">Sổ đỏ/Sổ hồng</option>
-                    <option value="2">Giấy tờ hợp lệ</option>
-                    <option value="3">Giấy phép XD</option>
-                    <option value="4">Giấy phép KD</option>
-                </select>
-            </div>
-
-            <?php wp_nonce_field('post_nonce', 'post_nonce_field');
+        <form method="POST" action="" id="form-dang-tin">
+            <fieldset>
+                <legend>Thông tin bắt buộc</legend>
+                <i class="describe">Bạn vui lòng điền đầy đủ thông tin bên dưới.</i>
+                <div class="form-group col-md-12 tieude">
+                    <label for="post_titles">
+                        Tiêu đề:
+                    </label><span class="text-danger">*</span>
+                    <input type="text" name="post_titles" class="form-control" placeholder="Tiêu đề" />
+                </div>
+                <div class="form-group col-md-12 noidung">
+                    <label for="post_contents">
+                        Nội dung 
+                    </label><span class="text-danger">*</span>
+                    <textarea name="post_contents" class="form-control"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Tỉnh/Thành phố
+                    </label><span class="text-danger">*</span>
+                    <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp form-control">
+                        <option value="0">--- Chọn Tỉnh/Thành ---</option>
+                        <?php foreach ($khuvuc as $cate) { ?>
+                            <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Quận/Huyện:
+                    </label><span class="text-danger">*</span>
+                    <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan form-control">
+                        <option value="0">--- Chọn Quận/Huyện ---</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>
+                        Địa chỉ:
+                    </label><span class="text-danger">*</span>
+                    <input name="diachi" class="diachi form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label>
+                        Diện tích (m2):
+                    </label><span class="text-danger">*</span>
+                    <input name="dientich" class="dien-tich form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label>
+                        Giá tiền (triệu đồng):
+                    </label><span class="text-danger">*</span>
+                    <input name="gia_ban" class="gia form-control" />
+                </div>
+                <div class="col-md-12">
+                    <button id="media" onclick="return false;" class="btn btn-success">Select Images</button>
+                    <!-- List of images id to save -->
+                    <input id="gallery_input" type="hidden" name="gallery" value="">
+                    <!-- Show images, use wp_get_attachment_image_src -->
+                    <ul id="display_gallery"></ul>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Thông tin khác</legend>
+                <i class="describe">THông tin không bắt buộc,nên điền đầy đủ để máy chủ tìm kiếm bài viết của bạn dễ hơn.</i>
+                <div class="form-group col-sm-12 col-md-6">
+                    <label>
+                        Chiều dài
+                    </label>
+                    <input name="chieudai" class="form-control"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-6">
+                    <label>
+                        Chiều rộng
+                    </label>
+                    <input name="chieurong" class="form-control"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-6">
+                    <label>
+                        Hướng
+                    </label>
+                    <select name="huong" class="form-control">
+                        <option value="0">--- Chọn Hướng ---</option>
+                        <option value="1">Đông</option>
+                        <option value="2">Tây</option>
+                        <option value="3">Nam</option>
+                        <option value="4">Bắc</option>
+                        <option value="5">Đông Nam</option>
+                        <option value="6">Đông Bắc</option>
+                        <option value="7">Tây Nam</option>
+                        <option value="8">Tây Bắc</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-12 col-md-6">
+                    <label>
+                        Pháp lý
+                    </label>
+                    <select name="phaply" class="form-control">
+                        <option value="0">--- Chọn Pháp lý ---</option>
+                        <option value="1">Sổ đỏ/Sổ hồng</option>
+                        <option value="2">Giấy tờ hợp lệ</option>
+                        <option value="3">Giấy phép XD</option>
+                        <option value="4">Giấy phép KD</option>
+                    </select>
+                </div>
+            </fieldset>
+            <?php
+            wp_nonce_field('post_nonce', 'post_nonce_field');
             ?>
             <div class="form-group">
                 <div class="col-sm-12" style="padding-left:0;">
