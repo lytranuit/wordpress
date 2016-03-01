@@ -23,7 +23,6 @@ jQuery(document).ready(function () {
         var file_frame = wp.media.frames.file_frame = wp.media({
             title: 'Select Images', // The title of frame
             library: {
-              
             },
             button: {text: 'Select'},
             multiple: true // Enable select multiple
@@ -50,11 +49,9 @@ jQuery(document).ready(function () {
             imgs_html = '';
             // Each selected image, push the id of image to an array and show image
             jQuery.each(attachment, function (index, item) {
-                attachment_ids.push(item.id);
+                attachment_ids.push(item.url);
                 imgs_html += '<li data-image-id="' + item.id + '">';
                 imgs_html += '<img src="' + item.url + '" />';
-                imgs_html += '<a class="del-img" href="javascript:;">';
-                imgs_html += '<span class="dashicons dashicons-dismiss"></span></a>'; // Button to remove image
                 imgs_html += '</li>';
             });
             jQuery('#gallery_input').val(attachment_ids.join(',')); // List of all images

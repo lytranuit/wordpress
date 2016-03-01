@@ -5022,7 +5022,7 @@ CSS Login
 
 .home article.hentry .entry-thumbnail img{
     width: 150px;
-    height: auto;
+    height: 100px;
     float: left;
     margin-right: 20px;
 }
