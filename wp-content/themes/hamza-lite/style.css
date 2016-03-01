@@ -1604,7 +1604,7 @@ TOP-FOOTER
     width: 32%;
 }
 #top-footer .footer .widget{
-    margin: 0px 10px;
+    margin-right: 20px;
 }
 #top-footer .footer .widget-title{
     color:#4e4c4c;
@@ -2913,7 +2913,6 @@ INNER-PAGES
 -------------------------------*/
 #content {
     padding: 48px 0 0 0;
-    background: #FFF;
 }
 .home #content {
     padding: 0;
@@ -5022,7 +5021,7 @@ CSS Login
 
 .home article.hentry .entry-thumbnail img{
     width: 150px;
-    height: auto;
+    height: 100px;
     float: left;
     margin-right: 20px;
 }

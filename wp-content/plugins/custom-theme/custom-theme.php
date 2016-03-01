@@ -35,6 +35,7 @@ function create_form_dang_tin() {
         );
         $khuvuc = get_terms($taxonomies, $args);
         //wp_enqueue_style('bosstrap', plugins_url('css/bootstrap.css', __FILE__), array("hamza-lite-style"), '1.0');
+        wp_enqueue_style('custom_css', plugins_url('css/custom.css', __FILE__));
         wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
         ?>
         <form method="POST" action="" id="form-dang-tin">
@@ -90,10 +91,14 @@ function create_form_dang_tin() {
                     </label><span class="text-danger">*</span>
                     <input name="gia_ban" class="gia form-control" />
                 </div>
+            </fieldset>
+            <fieldset>
+                <legend>Hình ảnh</legend>
+                <i class="describe">Hình ảnh thật của bất động sản.</i>
                 <div class="col-md-12">
                     <button id="media" onclick="return false;" class="btn btn-success">Select Images</button>
                     <!-- List of images id to save -->
-                    <input id="gallery_input" type="hidden" name="gallery" value="">
+                    <input id="gallery_input" type="hidden" name="images" value="">
                     <!-- Show images, use wp_get_attachment_image_src -->
                     <ul id="display_gallery"></ul>
                 </div>
@@ -200,6 +205,7 @@ function save_dang_tin() {
         $post_huong = $_POST['huong'];
         $post_phaply = $_POST['phaply'];
         $post_diachi = $_POST['diachi'];
+        $post_img = explode(',', $_POST['images']);
         $user_id = get_current_user_id();
         $post_data = array(
             'post_title' => wp_strip_all_tags($post_title),
@@ -212,11 +218,14 @@ function save_dang_tin() {
         if ($post_id) {
             update_post_meta($post_id, 'wpcf-dien-tich', $post_dientich);
             update_post_meta($post_id, 'wpcf-gia', $post_gia);
+            update_post_meta($post_id, 'wpcf-dia-chi', $post_diachi);
+            foreach ($post_img as $img) {
+                update_post_meta($post_id, 'wpcf-hinh-anh', $img);
+            }
             update_post_meta($post_id, 'wpcf-chieu-dai', $post_dai);
             update_post_meta($post_id, 'wpcf-chieu-rong', $post_rong);
             update_post_meta($post_id, 'wpcf-huong', $post_huong);
             update_post_meta($post_id, 'wpcf-phap-ly', $post_phaply);
-            update_post_meta($post_id, 'wpcf-dia-chi', $post_diachi);
             wp_set_post_terms($post_id, $post_quan, 'khu-vuc');
             wp_set_post_terms($post_id, 6, 'loai-tin');
         }
