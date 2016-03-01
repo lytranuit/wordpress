@@ -36,60 +36,63 @@ function create_form_dang_tin() {
         $khuvuc = get_terms($taxonomies, $args);
         //wp_enqueue_style('bosstrap', plugins_url('css/bootstrap.css', __FILE__), array("hamza-lite-style"), '1.0');
         wp_enqueue_style('custom_css', plugins_url('css/custom.css', __FILE__));
+
+        wp_enqueue_script('autonumeric', plugins_url('js/autoNumeric.js', __FILE__), array('jquery'), '1.0', true);
+        wp_enqueue_script('validate', plugins_url('js/jquery.validate.js', __FILE__), array('jquery'), '1.0', true);
         wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
         ?>
         <form method="POST" action="" id="form-dang-tin">
             <fieldset>
                 <legend>Thông tin bắt buộc</legend>
                 <i class="describe">Bạn vui lòng điền đầy đủ thông tin bên dưới.</i>
-                <div class="form-group col-md-12 tieude">
+                <div class="form-group col-md-12 tieude parent">
                     <label for="post_titles">
                         Tiêu đề:
-                    </label><span class="text-danger">*</span>
-                    <input type="text" name="post_titles" class="form-control" placeholder="Tiêu đề" />
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <input type="text" name="post_titles" class="form-control" placeholder="Tiêu đề" required=""/>
                 </div>
-                <div class="form-group col-md-12 noidung">
+                <div class="form-group col-md-12 noidung parent">
                     <label for="post_contents">
                         Nội dung 
-                    </label><span class="text-danger">*</span>
-                    <textarea name="post_contents" class="form-control"></textarea>
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <textarea name="post_contents" class="form-control" required=""></textarea>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 parent">
                     <label>
                         Tỉnh/Thành phố
-                    </label><span class="text-danger">*</span>
-                    <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp form-control">
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp form-control" required="">
                         <option value="0">--- Chọn Tỉnh/Thành ---</option>
                         <?php foreach ($khuvuc as $cate) { ?>
                             <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
                         <?php } ?>
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 parent">
                     <label>
                         Quận/Huyện:
-                    </label><span class="text-danger">*</span>
-                    <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan form-control">
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan form-control" required="">
                         <option value="0">--- Chọn Quận/Huyện ---</option>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4 parent">
                     <label>
                         Địa chỉ:
-                    </label><span class="text-danger">*</span>
-                    <input name="diachi" class="diachi form-control" />
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <input name="diachi" class="diachi form-control" required=""/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4 parent">
                     <label>
                         Diện tích (m2):
-                    </label><span class="text-danger">*</span>
-                    <input name="dientich" class="dien-tich form-control" />
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <input name="dientich" class="dien-tich form-control" required=""/>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4 parent">
                     <label>
                         Giá tiền (triệu đồng):
-                    </label><span class="text-danger">*</span>
-                    <input name="gia_ban" class="gia form-control" />
+                    </label><span class="text-danger">*</span><span class="error-place"></span>
+                    <input name="gia_ban" class="gia form-control" required=""/>
                 </div>
             </fieldset>
             <fieldset>
@@ -106,22 +109,22 @@ function create_form_dang_tin() {
             <fieldset>
                 <legend>Thông tin khác</legend>
                 <i class="describe">THông tin không bắt buộc,nên điền đầy đủ để máy chủ tìm kiếm bài viết của bạn dễ hơn.</i>
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-6 parent">
                     <label>
                         Chiều dài
-                    </label>
-                    <input name="chieudai" class="form-control"/>
+                    </label><span class="error-place"></span>
+                    <input name="chieudai" class="form-control chieudai"/>
                 </div>
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-6 parent">
                     <label>
                         Chiều rộng
-                    </label>
-                    <input name="chieurong" class="form-control"/>
+                    </label><span class="error-place"></span>
+                    <input name="chieurong" class="form-control chieurong"/>
                 </div>
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-6 parent">
                     <label>
                         Hướng
-                    </label>
+                    </label><span class="error-place"></span>
                     <select name="huong" class="form-control">
                         <option value="0">--- Chọn Hướng ---</option>
                         <option value="1">Đông</option>
@@ -134,10 +137,10 @@ function create_form_dang_tin() {
                         <option value="8">Tây Bắc</option>
                     </select>
                 </div>
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-6 parent">
                     <label>
                         Pháp lý
-                    </label>
+                    </label><span class="error-place"></span>
                     <select name="phaply" class="form-control">
                         <option value="0">--- Chọn Pháp lý ---</option>
                         <option value="1">Sổ đỏ/Sổ hồng</option>

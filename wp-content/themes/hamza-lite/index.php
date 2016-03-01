@@ -49,6 +49,7 @@ get_header();
     </div><!-- #primary -->
 
     <?php get_sidebar('right'); ?>
+    <?php wp_reset_postdata(); ?>
 </section>
 <script>
     jQuery(function ($) {

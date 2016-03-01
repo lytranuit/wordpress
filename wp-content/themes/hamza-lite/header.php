@@ -118,106 +118,12 @@
                         <div class="slider-wrap" style="width: 68.69%;display: inline-block;">
                             <?php do_action('hamza_lite_bxslider'); ?>
                         </div>
-                        <div class="search-box" style="    display: inline-block;
-                             display: inline-block;
-                             width: 28.29%;
-                             vertical-align: top;
-                             margin-top: 20px;
-                             padding: 20px;
-                             min-height: 353px;
-                             float: right;
-                             position: relative;
-                             border: 1px solid gray;">
-                            <label class='title' style="position: absolute;
-                                   top: -20px;
-                                   display: inline-block;
-                                   text-align: center;
-                                   /* width: 100%; */
-                                   left: 34%;
-                                   background: #eeeeee;
-                                   font-size: 20px;
-                                   color: green;
-                                   font-family: serif;
-                                   padding: 0px 5px;">Tìm ngay</label>
-                            <form class="form-search">
-                                <div>
-                                    <span>Khu vực</span><select>
-                                        <option value="0">--- Chọn Quận/Huyện ---</option>
-                                        <option value="8">Quận 1</option>
-                                        <option value="9">Quận 2</option>
-                                        <option value="10">Quận 3</option>
-                                        <option value="11">Quận 4</option>
-                                        <option value="12">Quận 5</option>
-                                        <option value="13">Quận 6</option>
-                                        <option value="14">Quận 7</option>
-                                        <option value="15">Quận 8</option>
-                                        <option value="16">Quận 9</option>
-                                        <option value="17">Quận 10</option>
-                                        <option value="18">Quận 11</option>
-                                        <option value="19">Quận 12</option>
-                                        <option value="20">Quận Thủ Đức</option>
-                                        <option value="21">Quận Bình Thạnh</option>
-                                        <option value="22">Quận Gò Vấp</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <span>Diện tích</span>
-                                    <select>
-                                        <option value="0">--- Chọn diện tích ---</option>
-                                        <option value="1">50m2-100m2</option>
-                                        <option value="2">100m2-1000m2</option>
-                                        <option value="3">Trên 1000m2</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <span>Hướng</span>
-                                    <select>
-                                        <option value="0">--- Chọn hướng ---</option>
-                                        <option value="1">Đông</option>
-                                        <option value="2">Tây</option>
-                                        <option value="3">Nam</option>
-                                        <option value="4">Bắc</option>
-                                        <option value="5">Đông Nam</option>
-                                        <option value="6">Đông Bắc</option>
-                                        <option value="7">Tây Nam</option>
-                                        <option value="8">Tây Bắc</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <span>Mức giá</span>
-                                    <select>
-                                        <option value="0">--- Chọn mức giá ---</option>
-                                        <option value="1">300 triêu - 500 triêu / BĐS</option>
-                                        <option value="2">500 triêu - 1 tỷ / BĐS</option>
-                                        <option value="3">1 tỷ - 3 tỷ / BĐS</option>
-                                        <option value="4">3 tỷ - 5 tỷ / BĐS</option>
-                                        <option value="5">3 tỷ - 5 tỷ / BĐS</option>
-                                        <option value="6">5 tỷ - 10 tỷ / BĐS</option>
-                                        <option value="7">Trên 10 tỷ / BĐS</option>
-                                    </select>
-                                </div>
-                                <button class="btn btn-success">Tìm kiếm</button>
-                            </form>
+                        <div class="search-box" style="">
+                            <?php get_template_part('searchform', 'advanced'); ?>
                         </div>
                     </div>
                 </section><!-- #slider-banner -->
-                <style>
-                    .form-search div{
-                        margin: 0px 0px 12px;
-                    }
-                    .form-search span{
-                        font-size: 15px;
-                    }
-                    .form-search select{
-                        width: 100%;
-                    }
-                    .form-search button{
-                        width: 100%;
-                    }
-                    .flex-direction-nav a{
-                        color:transparent;
-                    }
-                </style>
+
             <?php } ?>
 
             <?php

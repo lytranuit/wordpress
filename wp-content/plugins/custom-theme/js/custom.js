@@ -59,5 +59,31 @@ jQuery(document).ready(function () {
         });
         // Open media popup
         file_frame.open();
-    })
+    });
+    jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+    });
+    jQuery('#sodt').autoNumeric("init", {
+        aSep: ' ',
+        vMin: '0.00',
+        vMax: '9999999999.00',
+        aSign: '0',
+        pSign: 'p',
+        mDec: 0
+    });
+    jQuery('.gia,.dien-tich,.chieudai,.chieurong').autoNumeric("init", {
+        aSep: ' ',
+        aDec: ',',
+        pSign: 's',
+        mDec: 0
+    });
+    jQuery("#form-dang-tin").validate({
+        errorPlacement: function (error, element) {
+            error.appendTo(element.parents(".parent").find(".error-place"));
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 })
