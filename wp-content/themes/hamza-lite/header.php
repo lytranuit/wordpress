@@ -142,25 +142,58 @@
                             <form class="form-search">
                                 <div>
                                     <span>Khu vực</span><select>
-                                        <option value="">Q1</option>
+                                        <option value="0">--- Chọn Quận/Huyện ---</option>
+                                        <option value="8">Quận 1</option>
+                                        <option value="9">Quận 2</option>
+                                        <option value="10">Quận 3</option>
+                                        <option value="11">Quận 4</option>
+                                        <option value="12">Quận 5</option>
+                                        <option value="13">Quận 6</option>
+                                        <option value="14">Quận 7</option>
+                                        <option value="15">Quận 8</option>
+                                        <option value="16">Quận 9</option>
+                                        <option value="17">Quận 10</option>
+                                        <option value="18">Quận 11</option>
+                                        <option value="19">Quận 12</option>
+                                        <option value="20">Quận Thủ Đức</option>
+                                        <option value="21">Quận Bình Thạnh</option>
+                                        <option value="22">Quận Gò Vấp</option>
                                     </select>
                                 </div>
                                 <div>
                                     <span>Diện tích</span>
                                     <select>
-                                        <option value="">100m2</option>
+                                        <option value="0">--- Chọn diện tích ---</option>
+                                        <option value="1">50m2-100m2</option>
+                                        <option value="2">100m2-1000m2</option>
+                                        <option value="3">Trên 1000m2</option>
                                     </select>
                                 </div>
                                 <div>
                                     <span>Hướng</span>
                                     <select>
-                                        <option value="">Đông Nam</option>
+                                        <option value="0">--- Chọn hướng ---</option>
+                                        <option value="1">Đông</option>
+                                        <option value="2">Tây</option>
+                                        <option value="3">Nam</option>
+                                        <option value="4">Bắc</option>
+                                        <option value="5">Đông Nam</option>
+                                        <option value="6">Đông Bắc</option>
+                                        <option value="7">Tây Nam</option>
+                                        <option value="8">Tây Bắc</option>
                                     </select>
                                 </div>
                                 <div>
                                     <span>Mức giá</span>
                                     <select>
-                                        <option value=""></option>
+                                        <option value="0">--- Chọn mức giá ---</option>
+                                        <option value="1">300 triêu - 500 triêu / BĐS</option>
+                                        <option value="2">500 triêu - 1 tỷ / BĐS</option>
+                                        <option value="3">1 tỷ - 3 tỷ / BĐS</option>
+                                        <option value="4">3 tỷ - 5 tỷ / BĐS</option>
+                                        <option value="5">3 tỷ - 5 tỷ / BĐS</option>
+                                        <option value="6">5 tỷ - 10 tỷ / BĐS</option>
+                                        <option value="7">Trên 10 tỷ / BĐS</option>
                                     </select>
                                 </div>
                                 <button class="btn btn-success">Tìm kiếm</button>
