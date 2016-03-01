@@ -78,5 +78,8 @@
 [01-Mar-2016 09:20:03 UTC] PHP Warning:  parse_url() expects parameter 1 to be string, array given in C:\xampp\htdocs\wordpress\wp-content\plugins\types\embedded\toolset\toolset-common\toolset-forms\classes\class.file.php on line 94
 [01-Mar-2016 09:20:03 UTC] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in C:\xampp\htdocs\wordpress\wp-content\plugins\types\embedded\toolset\toolset-common\toolset-forms\classes\class.file.php on line 99
 [01-Mar-2016 09:20:03 UTC] PHP Notice:  Array to string conversion in C:\xampp\htdocs\wordpress\wp-includes\formatting.php on line 1025
+<<<<<<< HEAD
 [01-Mar-2016 09:56:15 UTC] PHP Notice:  Undefined index: wpcf-hinh-anh in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 93
 [01-Mar-2016 09:57:48 UTC] PHP Notice:  Undefined index: wpcf-hinh-anh in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\template-parts\content.php on line 93
+=======
+>>>>>>> 9ce0e764f802c04dd763e9ebc10948257a24f75b
