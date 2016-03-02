@@ -187,12 +187,17 @@ add_action('widgets_init', 'hamza_lite_widgets_init');
  */
 function hamza_lite_scripts() {
     // Add custom fonts, for typography
+    wp_enqueue_style('bootstrap.css', get_template_directory_uri() . '/css/bootstrap.css');
     wp_enqueue_style('hamza-lite-font', get_template_directory_uri() . '/css/fonts.css');
     wp_enqueue_style('hamza-lite-google-fonts', "https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900");
     wp_enqueue_style('hamza-lite-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_enqueue_style('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css');
     wp_enqueue_style('hamza-lite-bxslider-style', get_template_directory_uri() . '/css/flexslider.css');
+    wp_enqueue_style('selector_css', get_template_directory_uri() . '/css/bootstrap-select.min.css');
     wp_enqueue_style('hamza-lite-style', get_stylesheet_uri(), array(), '1.0');
+
+    wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array('jquery'), '1.0.16', true);
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '1.0.16', true);
     wp_enqueue_script('hamza-lite-bx-slider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '4.1', true);
     wp_enqueue_script('hamza-lite-nivo-lightbox', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array('jquery'), '2.1', true);
     wp_enqueue_script('hamza-lite-jquery-actual', get_template_directory_uri() . '/js/jquery.actual.min.js', array('jquery'), '1.0.16', true);
@@ -200,6 +205,7 @@ function hamza_lite_scripts() {
     wp_enqueue_script('hamza-lite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
     wp_enqueue_script('TweenMax', get_template_directory_uri() . '/js/animate-scroll-master/TweenMax.js', array(), '1.0.16', true);
     wp_enqueue_script('animate-scroll', get_template_directory_uri() . '/js/animate-scroll-master/animate-scroll.js', array(), '1.0.16', true);
+    wp_enqueue_script('selector', get_template_directory_uri() . '/js/bootstrap-select.js', array('jquery', 'bootstrap'), '1.0.16', true);
     wp_register_script('hamza-lite-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.1', true);
 
     $hamza_lite_slider_control_option = get_theme_mod('hamza_lite_slider_control_option', 'true');

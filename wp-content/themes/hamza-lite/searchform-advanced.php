@@ -9,11 +9,10 @@
        color: green;
        font-family: serif;
        padding: 0px 5px;">Tìm ngay</label>
-<form class="form-search" role="search" action="<?php echo esc_url(home_url('/')); ?>" method="get">
+<form class="form-search" role="search" action="<?php echo esc_url(home_url('/')); ?>" method="POST">
     <div>
         <span>Khu vực</span>
-        <select name="khuvuc">
-            <option value="0">--- Chọn Quận/Huyện ---</option>
+        <select name="khuvuc[]" multiple="" class="selectpicker" data-width="100%" title="Chọn Quận/Huyện">
             <option value="8">Quận 1</option>
             <option value="9">Quận 2</option>
             <option value="10">Quận 3</option>
@@ -33,8 +32,7 @@
     </div>
     <div>
         <span>Diện tích</span>
-        <select name="dientich">
-            <option value="0">--- Chọn diện tích ---</option>
+        <select name="dientich[]" multiple="" class="selectpicker" data-width="100%" title="Chọn diện tích">
             <option value="1">50m2-100m2</option>
             <option value="2">100m2-1000m2</option>
             <option value="3">Trên 1000m2</option>
@@ -42,8 +40,8 @@
     </div>
     <div>
         <span>Hướng</span>
-        <select name="huong">
-            <option value="0">--- Chọn hướng ---</option>
+        <select name="huong" class="selectpicker" data-width="100%" title="Chọn hướng">
+            <option value="0">Chọn hướng</option>
             <option value="1">Đông</option>
             <option value="2">Tây</option>
             <option value="3">Nam</option>
@@ -56,8 +54,7 @@
     </div>
     <div>
         <span>Mức giá</span>
-        <select name="mucgia">
-            <option value="0">--- Chọn mức giá ---</option>
+        <select name="mucgia[]" multiple="" class="selectpicker" data-width="100%" title="Chọn mức giá">
             <option value="1">300 triêu - 500 triêu / BĐS</option>
             <option value="2">500 triêu - 1 tỷ / BĐS</option>
             <option value="3">1 tỷ - 3 tỷ / BĐS</option>
@@ -70,6 +67,11 @@
     <input type="hidden" name="search" value="advanced">
     <button class="btn btn-success" type="submit">Tìm kiếm</button>
 </form>
+<script>
+    jQuery(function ($) {
+        $('.selectpicker').selectpicker();
+    });
+</script>
 <style>
     .search-box{
         display: inline-block;

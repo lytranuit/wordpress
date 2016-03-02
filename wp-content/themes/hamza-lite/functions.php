@@ -79,7 +79,7 @@ endif; // hamza_lite_setup
 add_action('after_setup_theme', 'hamza_lite_setup');
 
 function wpse_load_custom_search_template() {
-    if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced' && !is_admin() && $query->is_search && $query->is_main_query()) {
+    if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced') {
         require('search-advance.php');
         die();
     }
