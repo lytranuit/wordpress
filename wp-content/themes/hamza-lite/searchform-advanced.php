@@ -9,7 +9,7 @@
        color: green;
        font-family: serif;
        padding: 0px 5px;">Tìm ngay</label>
-<form class="form-search" role="search" action="<?php echo esc_url(home_url('/')); ?>" method="POST">
+<form class="form-search" role="search" action="<?php echo esc_url(home_url('/?s=advance')); ?>" method="POST">
     <div>
         <span>Khu vực</span>
         <select name="khuvuc[]" multiple="" class="selectpicker" data-width="100%" title="Chọn Quận/Huyện">
@@ -59,9 +59,8 @@
             <option value="2">500 triêu - 1 tỷ / BĐS</option>
             <option value="3">1 tỷ - 3 tỷ / BĐS</option>
             <option value="4">3 tỷ - 5 tỷ / BĐS</option>
-            <option value="5">3 tỷ - 5 tỷ / BĐS</option>
-            <option value="6">5 tỷ - 10 tỷ / BĐS</option>
-            <option value="7">Trên 10 tỷ / BĐS</option>
+            <option value="5">5 tỷ - 10 tỷ / BĐS</option>
+            <option value="6">Trên 10 tỷ / BĐS</option>
         </select>
     </div>
     <input type="hidden" name="search" value="advanced">

@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/search-advance.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-includes/query.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/functions.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/searchform-advanced.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/style.css</file>
+            <file>file:/F:/htdocs/wordpress/wp-includes/taxonomy.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/js/custom.js</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/plugins/types/embedded/classes/class.wpcf-post-types.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/template-parts/content-summary.php</file>
             <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
+            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/search.php</file>
         </group>
     </open-files>
 </project-private>

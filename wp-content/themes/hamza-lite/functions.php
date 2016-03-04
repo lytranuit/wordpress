@@ -77,15 +77,6 @@ if (!function_exists('hamza_lite_setup')) :
 
 endif; // hamza_lite_setup
 add_action('after_setup_theme', 'hamza_lite_setup');
-
-function wpse_load_custom_search_template() {
-    if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced') {
-        require('search-advance.php');
-        die();
-    }
-}
-
-add_action('init', 'wpse_load_custom_search_template');
 /**
  * Implement the Theme Option feature.
  */
