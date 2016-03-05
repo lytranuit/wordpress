@@ -1,20 +1,9 @@
 
 jQuery(document).ready(function () {
+    get_quan_huyen(jQuery(".post_tp").val());
     jQuery(document).on('change', '.post_tp', function () {
         var parent = jQuery(this).val();
-        var url = jQuery(this).attr('ajax');
-        jQuery.ajax({
-            url: url,
-            type: 'post',
-            data: {
-                action: 'get_quan_huyen',
-                parent: parent
-            },
-            success: function (data) {
-
-                jQuery(".post_quan").html(data);
-            }
-        });
+        get_quan_huyen(parent);
     });
     jQuery("#media").click(function () {
         event.preventDefault(); // Prevent reload page when click the button
@@ -64,14 +53,6 @@ jQuery(document).ready(function () {
         debug: true,
         success: "valid"
     });
-    jQuery('#sodt').autoNumeric("init", {
-        aSep: ' ',
-        vMin: '0.00',
-        vMax: '9999999999.00',
-        aSign: '0',
-        pSign: 'p',
-        mDec: 0
-    });
     jQuery('.gia,.dien-tich,.chieudai,.chieurong').autoNumeric("init", {
         aSep: ' ',
         aDec: ',',
@@ -83,7 +64,23 @@ jQuery(document).ready(function () {
             error.appendTo(element.parents(".parent").find(".error-place"));
         },
         submitHandler: function (form) {
+            jQuery('.gia,.dien-tich,.chieudai,.chieurong').each(function () {
+                var value = jQuery(this).autoNumeric('get');
+                console.log(value);
+                jQuery(this).val(value);
+            });
             form.submit();
+            return false;
+
         }
     });
-})
+});
+function get_quan_huyen(parent) {
+    jQuery(".post_quan").empty();
+    jQuery.each(khuvuc, function (k1, v1) {
+        if (v1['parent'] == parent) {
+            jQuery(".post_quan").append("<option value='" + v1['term_taxonomy_id'] + "'>" + v1['name'] + "</option>");
+        }
+    });
+
+}

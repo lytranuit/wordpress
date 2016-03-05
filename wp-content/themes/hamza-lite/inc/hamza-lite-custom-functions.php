@@ -206,6 +206,8 @@ function hamza_lite_scripts() {
     wp_enqueue_script('TweenMax', get_template_directory_uri() . '/js/animate-scroll-master/TweenMax.js', array(), '1.0.16', true);
     wp_enqueue_script('animate-scroll', get_template_directory_uri() . '/js/animate-scroll-master/animate-scroll.js', array(), '1.0.16', true);
     wp_enqueue_script('selector', get_template_directory_uri() . '/js/bootstrap-select.js', array('jquery', 'bootstrap'), '1.0.16', true);
+
+    wp_enqueue_script('autonumeric', get_template_directory_uri() . '/js/autoNumeric-min.js', array('jquery'), '1.0', true);
     wp_register_script('hamza-lite-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.1', true);
 
     $hamza_lite_slider_control_option = get_theme_mod('hamza_lite_slider_control_option', 'true');

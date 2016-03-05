@@ -30,17 +30,21 @@ function create_form_dang_tin() {
         );
         $args = array(
             'orderby' => 'asc',
-            'hide_empty' => false,
-            'parent' => 0
+            'hide_empty' => false
         );
         $khuvuc = get_terms($taxonomies, $args);
+//        echo "<pre>";
+//        print_r($khuvuc);
         //wp_enqueue_style('bosstrap', plugins_url('css/bootstrap.css', __FILE__), array("hamza-lite-style"), '1.0');
         wp_enqueue_style('custom_css', plugins_url('css/custom.css', __FILE__));
 
-        wp_enqueue_script('autonumeric', plugins_url('js/autoNumeric.js', __FILE__), array('jquery'), '1.0', true);
         wp_enqueue_script('validate', plugins_url('js/jquery.validate.js', __FILE__), array('jquery'), '1.0', true);
         wp_enqueue_script('custom_them_script', plugins_url('js/custom.js', __FILE__), array('jquery'), '1.0', true);
         ?>
+        <script>
+            var khuvuc = <?php echo json_encode($khuvuc); ?>;
+            console.log(khuvuc);
+        </script>
         <form method="POST" action="" id="form-dang-tin">
             <fieldset>
                 <legend>Thông tin bắt buộc</legend>
@@ -62,9 +66,10 @@ function create_form_dang_tin() {
                         Tỉnh/Thành phố
                     </label><span class="text-danger">*</span><span class="error-place"></span>
                     <select name="post_tp" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_tp form-control" required="">
-                        <option value="0">--- Chọn Tỉnh/Thành ---</option>
                         <?php foreach ($khuvuc as $cate) { ?>
-                            <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
+                            <?php if ($cate->parent == 0) { ?>
+                                <option value="<?= $cate->term_taxonomy_id; ?>"><?= $cate->name ?></option>
+                            <?php } ?>
                         <?php } ?>
                     </select>
                 </div>
@@ -73,7 +78,6 @@ function create_form_dang_tin() {
                         Quận/Huyện:
                     </label><span class="text-danger">*</span><span class="error-place"></span>
                     <select name="post_quan" ajax="<?= admin_url('admin-ajax.php') ?>" class="post_quan form-control" required="">
-                        <option value="0">--- Chọn Quận/Huyện ---</option>
                     </select>
                 </div>
                 <div class="form-group col-md-4 parent">

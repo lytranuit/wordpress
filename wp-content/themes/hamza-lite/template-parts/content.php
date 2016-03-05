@@ -109,7 +109,7 @@ $cat = wp_get_post_terms($post->ID, 'khu-vuc', array("fields" => "all"));
                             DT:
                         </label>
                         <span>
-                            <?php echo $meta['wpcf-dien-tich'][0]; ?>m2
+                            <?php echo $meta['wpcf-dien-tich'][0]; ?>
                         </span>
                     </div>
                     <div class="gia">
@@ -117,7 +117,7 @@ $cat = wp_get_post_terms($post->ID, 'khu-vuc', array("fields" => "all"));
                             Giá:
                         </label>
                         <span>
-                            <?php echo $meta['wpcf-gia'][0]; ?> triệu
+                            <?php echo $meta['wpcf-gia'][0]; ?>
                         </span>
                     </div>
                     <div class="diachi">

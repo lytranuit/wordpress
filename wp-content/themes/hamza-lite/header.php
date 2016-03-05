@@ -94,12 +94,13 @@
                                     ?>
                                     <div class="um-login-sidebar um-trigger-menu-on-click">
                                         <a href="#" class="um-profile-edit-a"><i class="um-faicon-user"></i> <?php echo $current_user->user_login; ?></a>
-                                        <div class="um-dropdown" data-element="div.um-login-sidebar" data-position="bc" data-trigger="click">
+                                        <div class="um-dropdown" data-element="div.um-login-sidebar" data-position="bc" data-trigger="click" >
                                             <div class="um-dropdown-b">
                                                 <div class="um-dropdown-arr"><i class=""></i></div>
                                                 <ul>
-                                                    <li><a href="<?php echo esc_url(home_url('/')); ?>account" class="real_url">Thông tin cá nhân</a></li>
-                                                    <li><a href="<?php echo esc_url(home_url('/')); ?>logout" class="real_url">Đăng xuất</a></li>
+                                                    <li><a href="<?php echo esc_url(home_url('/')); ?>dang-tin-moi" class="real_url"><i class="glyphicon glyphicon-pushpin"></i> Đăng tin mới</a></li>
+                                                    <li><a href="<?php echo esc_url(home_url('/')); ?>account" class="real_url"><i class="um-faicon-user"></i> Thông tin cá nhân</a></li>
+                                                    <li><a href="<?php echo esc_url(home_url('/')); ?>logout" class="real_url"><i class="glyphicon glyphicon-log-out"></i> Đăng xuất</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -115,7 +116,7 @@
             <?php if (is_home() || is_front_page()) { ?>
                 <section id="slider-banner">
                     <div class="ak-container">
-                        <div class="slider-wrap" style="width: 68.69%;display: inline-block;">
+                        <div class="slider-wrap" style="display: inline-block;">
                             <?php do_action('hamza_lite_bxslider'); ?>
                         </div>
                         <div class="search-box" style="">

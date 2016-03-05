@@ -1,14 +1,4 @@
-<label class='title' style="position: absolute;
-       top: -20px;
-       display: inline-block;
-       text-align: center;
-       /* width: 100%; */
-       left: 34%;
-       background: #eeeeee;
-       font-size: 20px;
-       color: green;
-       font-family: serif;
-       padding: 0px 5px;">Tìm ngay</label>
+<label class='title'>Tìm ngay</label>
 <form class="form-search" role="search" action="<?php echo esc_url(home_url('/?s=advance')); ?>" method="POST">
     <div>
         <span>Khu vực</span>
@@ -64,51 +54,10 @@
         </select>
     </div>
     <input type="hidden" name="search" value="advanced">
-    <button class="btn btn-success" type="submit">Tìm kiếm</button>
+    <button class="btn btn-success" type="submit" style="margin-top: 20px;">Tìm kiếm</button>
 </form>
 <script>
     jQuery(function ($) {
         $('.selectpicker').selectpicker();
     });
 </script>
-<style>
-    .search-box{
-        display: inline-block;
-        display: inline-block;
-        width: 28.29%;
-        vertical-align: top;
-        margin-top: 20px;
-        padding: 20px;
-        min-height: 353px;
-        float: right;
-        position: relative;
-        border: 1px solid gray;
-    }
-    .form-search div{
-        margin: 0px 0px 12px;
-    }
-    .form-search span{
-        font-size: 15px;
-    }
-    .form-search select{
-        display: block;
-        width: 100%;
-        height: 34px;
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #555;
-        background-color: #fff;
-        background-image: none;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    }
-    .form-search button{
-        width: 100%;
-    }
-</style>

@@ -54,7 +54,7 @@ $hamza_lite_contact_form = get_theme_mod('hamza_lite_contact_form');
             <div class="ak-container">
                 <div class="footer1 footer" data-animate-scroll='{"alpha": "0", 
                      "duration": "0.5",
-                     "y": "200"}'>
+                     "y": "50"}'>
                          <?php if (is_active_sidebar('footer-1')) : ?>
                              <?php dynamic_sidebar('footer-1'); ?>
                          <?php endif; ?>	
@@ -62,7 +62,7 @@ $hamza_lite_contact_form = get_theme_mod('hamza_lite_contact_form');
 
                 <div class="footer2 footer"data-animate-scroll='{"alpha": "0", 
                      "duration": "1",
-                     "y": "200"}'>
+                     "y": "50"}'>
                          <?php if (is_active_sidebar('footer-2')) : ?>
                              <?php dynamic_sidebar('footer-2'); ?>
                          <?php endif; ?>	
@@ -72,7 +72,7 @@ $hamza_lite_contact_form = get_theme_mod('hamza_lite_contact_form');
 
                 <div class="footer3 footer" data-animate-scroll='{"alpha": "0", 
                      "duration": "1.5",
-                     "y": "200"}'>
+                     "y": "50"}'>
                          <?php if (is_active_sidebar('footer-3')) : ?>
                              <?php dynamic_sidebar('footer-3'); ?>
                          <?php endif; ?>	

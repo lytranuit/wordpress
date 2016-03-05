@@ -1586,7 +1586,11 @@ TOP-FOOTER
 }
 #top-footer{
     font-size: 14px;
+    margin-top: 30px;
+    background: #6bbd61;
     font-weight: 300;
+    padding-top: 20px;
+    color: white;
 }
 
 #top-footer .footer {
@@ -2918,11 +2922,20 @@ INNER-PAGES
 }
 #primary{
     float: left;
-    width: 67.69%;
+    width: 69.69%;
+}
+#main{
+    padding: 20px;
+    background: white;
 }
 .sidebar {
     float: right;
     width: 28.29%;
+}
+.sidebar .widget{
+    background: white;
+    padding: 10px;
+    box-shadow: #848484 0px 0px 10px -2px;
 }
 .sidebar .widget_hamza_lite_recent_portfolio{
     clear: both;
@@ -2952,6 +2965,8 @@ INNER-PAGES
 }
 .sidebar .hamza_lite-recent-rightdivs{
     margin-bottom: 15px;
+    padding: 10px 0px;
+    border-bottom: 1px dashed #BFBFBF;
 }
 .sidebar .hamza_lite-recent-rightbar-img{
     float: left;
@@ -3066,10 +3081,10 @@ RIGHT-SIDEBAR
     font-weight: 400;
 }
 .widget-title {
-    border-bottom: 1px solid #e5e5e5;
-    border-left: 3px solid #29bb9c;
-    color: #4c4c4c;
-    font-size: 24px;
+    border-bottom: 1px solid #DCD2D2;
+    border-left: 3px solid #4BA8C3;
+    color: #842E2E;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 22px;
     padding-bottom: 7px;
@@ -3501,6 +3516,14 @@ CSS Login
     width:49%;
     vertical-align: top;
     margin-right: 5px;
+    border: 1px #989696;
+    background: #FBFBFB;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+}
+.home article.hentry:hover{
+    box-shadow: rgb(132, 132, 132) 0px 0px 10px -2px;
 }
 a.title-entry{
     font-weight: bold;
@@ -3515,6 +3538,9 @@ a.title-entry{
 }
 .details-wp span{
     color:red;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: initial;
 }
 .dtich{
     display:inline-block;
@@ -3548,4 +3574,57 @@ form-dang-tin
     color: red;
     font-family: cursive;
     margin: 0px 5px;
+}
+.search-box{
+    display: inline-block;
+    width: 28.29%;
+    vertical-align: top;
+    margin-top: 20px;
+    padding: 20px;
+    min-height: 353px;
+    float: right;
+    position: relative;
+    border: 1px solid gray;
+}
+.search-box .title{
+    position: absolute;
+    top: -20px;
+    display: inline-block;
+    text-align: center;
+    left: 2%;
+    background: #eeeeee;
+    font-size: 20px;
+    color: green;
+    font-family: serif;
+    padding: 0px 1%;
+}
+.form-search div{
+    margin: 0px 0px 12px;
+}
+.form-search span{
+    font-size: 15px;
+}
+.form-search select{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-search button{
+    width: 100%;
+}
+.um-dropdown{
+    text-align: justify !important;
 }

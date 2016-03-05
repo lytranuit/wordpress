@@ -485,7 +485,9 @@
     }
 
     /*** SIDEBAR ****/
-    #primary, 
+    #primary,
+    .search-box,
+    .slider-wrap,
     .sidebar , 
     .both-sidebar #primary-wrap #primary,
     .both-sidebar #primary-wrap .left-sidebar.sidebar,
