@@ -90,7 +90,7 @@ html[xmlns] .flexslider .slides {
     zoom: 1;
 }
 .flexslider .slides img {
-    height: 342px;
+    /*height: 342px;*/
     -moz-user-select: none;
 }
 .flex-viewport {
@@ -291,3 +291,13 @@ html[xmlns] .flexslider .slides {
 .flex-direction-nav a{
     color:transparent;
 }
+#silder-main .slides img {
+    height: 342px; 
+}
+#vertical-slide h6{
+    font-size: 13px;
+}
+#vertical-slide li{
+    clear: both;
+}
+#vertical-slide .flex-viewport { height: 650px !important;}

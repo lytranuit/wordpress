@@ -12,8 +12,6 @@ require_once(ABSPATH . 'wp-admin/includes/plugin.php');
 define('custom_theme_url', plugin_dir_url(__FILE__));
 define('custom_theme_path', plugin_dir_path(__FILE__));
 define('custom_theme_plugin', plugin_basename(__FILE__));
-
-require_once (custom_theme_path . 'widget-function.php');
 ?>
 <?php
 add_shortcode('form_dang_tin', 'create_form_dang_tin');

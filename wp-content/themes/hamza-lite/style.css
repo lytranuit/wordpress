@@ -462,7 +462,8 @@ h1.entry-title a{
 .entry-summary {
     font-size: 12px;
     line-height: 23px;
-    margin: 15px 0 0;
+    /* margin: 15px 0 0; */
+    vertical-align: top;
 }
 .entry-content .wpcf7-form img{
     float: none;
@@ -3118,32 +3119,7 @@ LEFT-SIDEBAR
 .sidebar .widget_search input[type="text"]:focus, .sidebar .widget_search input[type="text"]:active{
     border:1px solid #23a38f;
 }
-.sidebar ul {
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-}
-.sidebar ul li {
-    border-bottom: 1px solid #f2f2f2;
-    margin-bottom: 5px;
-    padding: 0 0 5px !important;
-}
-.sidebar ul li:before {
-    content: "\f0a4";
-    font-family: 'fontawesome';
-    margin-right: 10px;
-    color: #666;
-}
-.sidebar ul li:last-child{
-    border-bottom: none;
-}
-.sidebar ul li a {
-    color: #666;
-    font-weight: 300;
-}
-.sidebar ul li a:hover{
-    color: #58B25E;
-}
+
 
 /*-----------------------------
 BOTH-SIDEBAR
@@ -3542,16 +3518,6 @@ a.title-entry{
     font-weight: 600;
     font-family: initial;
 }
-.dtich{
-    display:inline-block;
-    margin-right: 10%;
-}
-.gia{
-    display:inline-block;
-}
-.diachi{
-
-}
 
 /*
 form-dang-tin
@@ -3627,4 +3593,7 @@ form-dang-tin
 }
 .um-dropdown{
     text-align: justify !important;
+}
+.search-thumb img{
+    height: 150px;
 }

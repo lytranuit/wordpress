@@ -32,14 +32,14 @@
         <span>Hướng</span>
         <select name="huong" class="selectpicker" data-width="100%" title="Chọn hướng">
             <option value="0">Chọn hướng</option>
-            <option value="1">Đông</option>
-            <option value="2">Tây</option>
-            <option value="3">Nam</option>
-            <option value="4">Bắc</option>
-            <option value="5">Đông Nam</option>
-            <option value="6">Đông Bắc</option>
-            <option value="7">Tây Nam</option>
-            <option value="8">Tây Bắc</option>
+            <option>Đông</option>
+            <option>Tây</option>
+            <option>Nam</option>
+            <option>Bắc</option>
+            <option>Đông Nam</option>
+            <option>Đông Bắc</option>
+            <option>Tây Nam</option>
+            <option>Tây Bắc</option>
         </select>
     </div>
     <div>
