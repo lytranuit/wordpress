@@ -78,8 +78,7 @@ class Hamza_Lite_Slider_Post extends WP_Widget {
         $hamza_lite_recent_arg = array(
             'post_type' => 'post',
             'cat' => $hamza_lite_category,
-            'post_status' => 'publish',
-            'posts_per_page' => $hamza_lite_number_of_post
+            'post_status' => 'publish'
         );
         //var_dump($recent_arg);
         $hamza_lite_recent_qry = new WP_Query($hamza_lite_recent_arg);
@@ -90,7 +89,7 @@ class Hamza_Lite_Slider_Post extends WP_Widget {
                 echo $before_title . $hamza_lite_display_title . $after_title;
             }
             ?>
-            <div class="flexslider" id="vertical-slide">
+            <div id="vertical-slide">
                 <div class="view-silde">
                     <?php
                     while ($hamza_lite_recent_qry->have_posts()) {
@@ -132,7 +131,31 @@ class Hamza_Lite_Slider_Post extends WP_Widget {
             echo $after_widget;
             wp_reset_postdata();
             ?>
-
+            <script>
+                jQuery(function ($) {
+                    $(document).ready(function () {
+                        var item = $(".hamza_lite-recent-rightdivs");
+                        var view = $(".view-silde");
+                        var outer = item.outerHeight(true);
+                        var showitem = <?php echo $hamza_lite_number_of_post; ?>;
+                        view.css({'max-height': outer * showitem, 'overflow': 'hidden'});
+                        setInterval(function () {
+                            var pos = view.scrollTop();
+                            var height = view.height();
+                            var real = view.prop('scrollHeight');
+                            if (real - height > pos + 10) {
+                                view.animate({
+                                    scrollTop: pos + outer
+                                }, 1000);
+                            } else {
+                                view.animate({
+                                    scrollTop: 0
+                                }, 1000);
+                            }
+                        }, 3000);
+                    });
+                });
+            </script>
             <?php
         }
     }

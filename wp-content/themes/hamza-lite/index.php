@@ -113,7 +113,6 @@ get_header();
         $('.gia span').each(function () {
             var value = $(this).text();
             if (value != 0) {
-                console.log(value);
                 if (value < 1000) {
                     $(this).text(value + ' triệu');
                 } else {
