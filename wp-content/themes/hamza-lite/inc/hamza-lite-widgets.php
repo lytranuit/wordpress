@@ -55,3 +55,8 @@ require get_template_directory() . '/inc/widgets/widget-featured-post.php';
  *
  */
 require get_template_directory() . '/inc/widgets/widget-silder-post.php';
+/**
+ * Register Tim kiếm Widget
+ *
+ */
+require get_template_directory() . '/inc/widgets/widget-tim-kiem.php';

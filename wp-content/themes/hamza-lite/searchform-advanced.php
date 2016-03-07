@@ -1,23 +1,42 @@
 <label class='title'>Tìm ngay</label>
+<?php
+$taxonomies = array(
+    'khu-vuc'
+);
+$args = array(
+    'orderby' => 'asc',
+    'hide_empty' => false,
+    'parent' => 0
+);
+$khuvuc = get_terms($taxonomies, $args);
+//echo "<pre>";
+//print_r($khuvuc);
+//die();
+?>
 <form class="form-search" role="search" action="<?php echo esc_url(home_url('/?s=advance')); ?>" method="POST">
     <div>
         <span>Khu vực</span>
         <select name="khuvuc[]" multiple="" class="selectpicker" data-width="100%" title="Chọn Quận/Huyện">
-            <option value="8">Quận 1</option>
-            <option value="9">Quận 2</option>
-            <option value="10">Quận 3</option>
-            <option value="11">Quận 4</option>
-            <option value="12">Quận 5</option>
-            <option value="13">Quận 6</option>
-            <option value="14">Quận 7</option>
-            <option value="15">Quận 8</option>
-            <option value="16">Quận 9</option>
-            <option value="17">Quận 10</option>
-            <option value="18">Quận 11</option>
-            <option value="19">Quận 12</option>
-            <option value="20">Quận Thủ Đức</option>
-            <option value="21">Quận Bình Thạnh</option>
-            <option value="22">Quận Gò Vấp</option>
+            <?php
+            foreach ($khuvuc as $cate) {
+                ?>
+                <optgroup label="<?= $cate->name; ?>">
+                    <?php
+                    $taxonomies = array(
+                        'khu-vuc'
+                    );
+                    $args = array(
+                        'orderby' => 'asc',
+                        'hide_empty' => false,
+                        'parent' => $cate->term_taxonomy_id
+                    );
+                    $quanhuyen = get_terms($taxonomies, $args);
+                    foreach ($quanhuyen as $quan) {
+                        ?>
+                        <option value="<?= $quan->term_taxonomy_id; ?>"><?= $quan->name ?></option>
+                    <?php } ?>
+                </optgroup>
+            <?php } ?>
         </select>
     </div>
     <div>
