@@ -328,7 +328,7 @@ function hamza_lite_bxslidercb() {
                     $hamza_lite_remove = array(0);
                     $hamza_lite_sliders = array_diff($hamza_lite_sliders, $hamza_lite_remove);
                     ?>
-                    <div class="flexslider">
+                    <div id="silder-main" class="flexslider">
                         <ul class="slides">
                             <?php
                             foreach ($hamza_lite_sliders as $hamza_lite_slider) {

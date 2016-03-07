@@ -1,4 +1,4 @@
-jQuery(function($) {
+jQuery(function ($) {
     if (hamza_lite_data.option == 'true') {
         var slider_pager = true;
     } else {
@@ -23,12 +23,12 @@ jQuery(function($) {
 //        slideWidth: 220,
 //        slideMargin: 10
 //    });=
-    $('.flexslider').flexslider({
+    $('#silder-main').flexslider({
         animation: "slide",
         controlNav: false
     });
 
-    $('#login-trigger').click(function() {
+    $('#login-trigger').click(function () {
         $(this).next('#login-content').slideToggle();
         $(this).toggleClass('active');
 
@@ -51,39 +51,39 @@ jQuery(function($) {
         var maxsl = 3;
         swidth = 390;
     }
-   
 
-    $(window).resize(function() {
-        $('.slider-caption').each(function() {
+
+    $(window).resize(function () {
+        $('.slider-caption').each(function () {
             var cap_height = $(this).actual('outerHeight');
             $(this).css('margin-top', -(cap_height / 2));
         });
     }).resize();
 
-    $('.caption-description').each(function() {
+    $('.caption-description').each(function () {
         $(this).find('a').appendTo($(this).parent('.ak-container'));
     });
 
 
     $('.commentmetadata').after('<div class="clear"></div>');
 
-    $('.menu-toggle').click(function() {
+    $('.menu-toggle').click(function () {
         $('#site-navigation .menu').slideToggle('slow');
     });
 
-    $('.gallery .gallery-item a').each(function() {
+    $('.gallery .gallery-item a').each(function () {
         $(this).addClass('fancybox-gallery').attr('data-lightbox-gallery', 'gallery');
     });
 
     $(".fancybox-gallery").nivoLightbox();
 
 
-    $('.search-icon .fa-search').click(function() {
+    $('.search-icon .fa-search').click(function () {
         $('.ak-search').fadeToggle();
     });
 
-    $(window).bind('load', function() {
-        $('.slider-wrap .slides').each(function() {
+    $(window).bind('load', function () {
+        $('.slider-wrap .slides').each(function () {
             $(this).prepend('<div class="overlay"></div>');
         });
     });

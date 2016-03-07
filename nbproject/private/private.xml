@@ -3,18 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/css/bootstrap.css</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/css/flexslider.css</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/header.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/footer.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/functions.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/searchform-advanced.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/style.css</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/js/custom.js</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/search.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
-            <file>file:/F:/htdocs/wordpress/wp-content/themes/hamza-lite/css/responsive.css</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/template-parts/content.php</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/index.php</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/style.css</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/searchform-advanced.php</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/search.php</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/template-parts/content-search.php</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/themes/hamza-lite/js/custom.js</file>
+            <file>file:/C:/xampp/htdocs/wordpress/wp-content/plugins/custom-theme/custom-theme.php</file>
         </group>
     </open-files>
 </project-private>

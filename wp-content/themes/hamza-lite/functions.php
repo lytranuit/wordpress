@@ -77,6 +77,16 @@ if (!function_exists('hamza_lite_setup')) :
 
 endif; // hamza_lite_setup
 add_action('after_setup_theme', 'hamza_lite_setup');
+
+function get_mid_by_key($post_id, $meta_key) {
+    global $wpdb;
+    $mid = $wpdb->get_var($wpdb->prepare("SELECT meta_id FROM $wpdb->postmeta WHERE post_id = %d AND meta_key = %s", $post_id, $meta_key));
+    if ($mid != '')
+        return (int) $mid;
+
+    return false;
+}
+
 /**
  * Implement the Theme Option feature.
  */

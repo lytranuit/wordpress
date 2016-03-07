@@ -18,7 +18,6 @@ if ($huong) {
     $huong = array(
         'key' => 'wpcf-huong', //(string) - Tên meta key
         'value' => $huong, //(string/array) - Giá trị meta value
-        'type' => 'NUMERIC',
         'compare' => '='
     );
 } else {
@@ -136,7 +135,7 @@ $the_query = new WP_Query($args);
                 <?php /* Start the Loop */ ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                    <?php get_template_part('template-parts/content', 'summary'); ?>
+                    <?php get_template_part('template-parts/content', 'search'); ?>
 
                 <?php endwhile; ?>
 
@@ -154,4 +153,38 @@ $the_query = new WP_Query($args);
     <?php get_sidebar('right'); ?>
     <?php wp_reset_postdata(); ?>
 </div>
+<script>
+    jQuery(function ($) {
+        $('.home article.hentry a.title-entry').each(function (index, element) {
+            $clamp(element, {clamp: 2});
+        });
+        $('.dtich span').autoNumeric("init", {
+            aSep: ' ',
+            aDec: ',',
+            pSign: 's',
+            vMin: '0.00',
+            vMax: '9999999999.99',
+            mDec: 0,
+            aSign: ' m2'
+        });
+        $('.gia span').each(function () {
+            var value = $(this).text();
+            if (value != 0) {
+                console.log(value);
+                if (value < 1000) {
+                    $(this).text(value + ' triệu');
+                } else {
+                    $(this).text(parseFloat(value) / 1000 + ' tỉ');
+                }
+            } else {
+                $(this).text('0 triệu');
+            }
+        });
+        $('.dtich span').each(function () {
+            var value = $(this).text();
+            $(this).text(value.substring(1, value.length));
+        });
+        $(document).animateScroll();
+    });
+</script>
 <?php get_footer(); ?>
