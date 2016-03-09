@@ -60,3 +60,8 @@ require get_template_directory() . '/inc/widgets/widget-silder-post.php';
  *
  */
 require get_template_directory() . '/inc/widgets/widget-tim-kiem.php';
+/**
+ * Register Khu vưc Widget
+ *
+ */
+require get_template_directory() . '/inc/widgets/widget-khu-vuc.php';
