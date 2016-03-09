@@ -23,6 +23,17 @@ if ($huong) {
 } else {
     
 }
+$phaply = $_REQUEST['phaply'];
+/* huong */
+if ($phaply) {
+    $phaply = array(
+        'key' => 'wpcf-phap-ly', //(string) - Tên meta key
+        'value' => $phaply, //(string/array) - Giá trị meta value
+        'compare' => '='
+    );
+} else {
+    
+}
 foreach ($_REQUEST['khuvuc'] as $row) {
     array_push($khuvuc, $row);
     $arr = array(
@@ -114,7 +125,8 @@ $args = array(
         'relation' => 'AND', //(string) - Mối quan hệ của các array query bên trong, sử dụng 'OR' hoặc 'AND'
         $dientich,
         $mucgia,
-        $huong
+        $huong,
+        $phaply
     )
 );
 $the_query = new WP_Query($args);

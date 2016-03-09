@@ -55,6 +55,7 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
         $hamza_lite_display_thumbnail = $hamza_lite_instance['show_post_thumbnail'];
         $hamza_lite_post_date = $hamza_lite_instance['show_post_date'];
         $huong = $_REQUEST['huong'];
+        $phaply = $_REQUEST['phaply'];
         $khuvuc = array();
         $dientich = array();
         $mucgia = array();
@@ -118,6 +119,17 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
                     </select>
                 </div>
                 <div>
+                    <span>Mức giá</span>
+                    <select name="mucgia[]" multiple="" class="selectpicker mucgia" data-width="100%" title="Chọn mức giá" style="display: none;">
+                        <option value="1">300 triêu - 500 triêu / BĐS</option>
+                        <option value="2">500 triêu - 1 tỷ / BĐS</option>
+                        <option value="3">1 tỷ - 3 tỷ / BĐS</option>
+                        <option value="4">3 tỷ - 5 tỷ / BĐS</option>
+                        <option value="5">5 tỷ - 10 tỷ / BĐS</option>
+                        <option value="6">Trên 10 tỷ / BĐS</option>
+                    </select>
+                </div>
+                <div>
                     <span>Hướng</span>
                     <select name="huong" class="selectpicker huong" data-width="100%" title="Chọn hướng" style="display: none;">
                         <option value="0">Chọn hướng</option>
@@ -131,15 +143,15 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
                         <option value="Tây Bắc">Tây Bắc</option>
                     </select>
                 </div>
+
                 <div>
-                    <span>Mức giá</span>
-                    <select name="mucgia[]" multiple="" class="selectpicker mucgia" data-width="100%" title="Chọn mức giá" style="display: none;">
-                        <option value="1">300 triêu - 500 triêu / BĐS</option>
-                        <option value="2">500 triêu - 1 tỷ / BĐS</option>
-                        <option value="3">1 tỷ - 3 tỷ / BĐS</option>
-                        <option value="4">3 tỷ - 5 tỷ / BĐS</option>
-                        <option value="5">5 tỷ - 10 tỷ / BĐS</option>
-                        <option value="6">Trên 10 tỷ / BĐS</option>
+                    <span>Pháp lý</span>
+                    <select name="phaply" class="selectpicker phaply" data-width="100%" title="Chọn pháp lý" style="display: none;">
+                        <option value="0">Chọn pháp lý</option>
+                        <option value="Sổ đỏ/Sổ hồng">Sổ đỏ/Sổ hồng</option>
+                        <option value="Giấy tờ hợp lệ">Giấy tờ hợp lệ</option>
+                        <option value="Giấy phép XD">Giấy phép XD</option>
+                        <option value="Giấy phép KD">Giấy phép KD</option>
                     </select>
                 </div>
                 <input type="hidden" name="search" value="advanced">
@@ -151,7 +163,9 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
                     var mucgia = <?php echo json_encode($mucgia) ?>;
                     var khuvuc = <?php echo json_encode($khuvuc) ?>;
                     var dientich = <?php echo json_encode($dientich) ?>;
+                    var phaply = '<?php echo $phaply; ?>';
                     $(".huong option[value='" + huong + "']").prop("selected", 'selected');
+                    $(".phaply option[value='" + phaply + "']").prop("selected", 'selected');
                     $.each(mucgia, function (k1, v1) {
                         $(".mucgia option[value='" + v1 + "']").prop("selected", "selected");
                     });

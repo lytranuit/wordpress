@@ -129,14 +129,14 @@ function create_form_dang_tin() {
                     </label><span class="error-place"></span>
                     <select name="huong" class="form-control">
                         <option value="0">--- Chọn Hướng ---</option>
-                        <option value="1">Đông</option>
-                        <option value="2">Tây</option>
-                        <option value="3">Nam</option>
-                        <option value="4">Bắc</option>
-                        <option value="5">Đông Nam</option>
-                        <option value="6">Đông Bắc</option>
-                        <option value="7">Tây Nam</option>
-                        <option value="8">Tây Bắc</option>
+                        <option value="Đông">Đông</option>
+                        <option value="Tây">Tây</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Bắc">Bắc</option>
+                        <option value="Đông Nam">Đông Nam</option>
+                        <option value="Đông Bắc">Đông Bắc</option>
+                        <option value="Tây Nam">Tây Nam</option>
+                        <option value="Tây Bắc">Tây Bắc</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-12 col-md-6 parent">
@@ -145,10 +145,10 @@ function create_form_dang_tin() {
                     </label><span class="error-place"></span>
                     <select name="phaply" class="form-control">
                         <option value="0">--- Chọn Pháp lý ---</option>
-                        <option value="1">Sổ đỏ/Sổ hồng</option>
-                        <option value="2">Giấy tờ hợp lệ</option>
-                        <option value="3">Giấy phép XD</option>
-                        <option value="4">Giấy phép KD</option>
+                        <option value="Sổ đỏ/Sổ hồng">Sổ đỏ/Sổ hồng</option>
+                        <option value="Giấy tờ hợp lệ">Giấy tờ hợp lệ</option>
+                        <option value="Giấy phép XD">Giấy phép XD</option>
+                        <option value="Giấy phép KD">Giấy phép KD</option>
                     </select>
                 </div>
             </fieldset>
