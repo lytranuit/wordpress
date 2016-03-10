@@ -10994,3 +10994,29 @@
 [09-Mar-2016 07:17:06 UTC] PHP Notice:  Undefined index: mucgia in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
 [09-Mar-2016 07:17:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
 [09-Mar-2016 07:17:06 UTC] PHP Notice:  Undefined variable: stt in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-silder-post.php on line 101
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: number_of_post in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 51
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: category_list in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 53
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: show_post_thumbnail in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 55
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: show_post_date in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 56
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: huong in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 57
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: phaply in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 58
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: khuvuc in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 62
+[10-Mar-2016 01:23:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 62
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: dientich in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 65
+[10-Mar-2016 01:23:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 65
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined index: mucgia in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
+[10-Mar-2016 01:23:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
+[10-Mar-2016 01:23:25 UTC] PHP Notice:  Undefined variable: stt in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-silder-post.php on line 101
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: number_of_post in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 51
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: category_list in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 53
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: show_post_thumbnail in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 55
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: show_post_date in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 56
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: huong in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 57
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: phaply in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 58
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: khuvuc in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 62
+[10-Mar-2016 01:37:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 62
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: dientich in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 65
+[10-Mar-2016 01:37:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 65
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined index: mucgia in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
+[10-Mar-2016 01:37:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-tim-kiem.php on line 68
+[10-Mar-2016 01:37:27 UTC] PHP Notice:  Undefined variable: stt in C:\xampp\htdocs\wordpress\wp-content\themes\hamza-lite\inc\widgets\widget-silder-post.php on line 101
