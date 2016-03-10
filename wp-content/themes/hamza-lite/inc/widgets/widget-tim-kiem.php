@@ -72,7 +72,7 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
             'khu-vuc'
         );
         $args = array(
-            'orderby' => 'asc',
+            'order' => 'asc',
             'hide_empty' => false,
             'parent' => 0
         );
@@ -97,7 +97,7 @@ class Hamza_Lite_Tim_Kiem extends WP_Widget {
                                     'khu-vuc'
                                 );
                                 $args = array(
-                                    'orderby' => 'asc',
+                                    'order' => 'asc',
                                     'hide_empty' => false,
                                     'parent' => $cate->term_taxonomy_id
                                 );

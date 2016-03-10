@@ -2990,6 +2990,15 @@ INNER-PAGES
 .sidebar .hamza_lite-recent-rightbar-content .hamza_lite-recent-rightbar-title a:hover{
     color: #58B25E;
 }
+.sidebar .khuvu-widget-right .parent{
+    font-weight: bold;
+    list-style: none;
+    font-size: 12px;
+}
+.sidebar .khuvu-widget-right .child{
+    list-style:circle;
+    font-size: 12px;
+}
 .hamza_lite-recent-rightbar-date {
     color: #b8b8b8;
     font-size: 12px;
