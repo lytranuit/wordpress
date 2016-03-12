@@ -2520,7 +2520,7 @@ article.cat-blog-list {
 }
 .single .entry-meta, .cat-blog-list .entry-meta {
     float: left;
-    width: 89%;
+    width: 100%;
 }
 .single .entry-meta h2.entry-title, .cat-blog-list .entry-meta > h2 {
     font-size: 22px;
@@ -3518,14 +3518,18 @@ a.title-entry{
 .details-wp{
     margin: 10px 0px;
 }
-.details-wp label{
+.details-wp label,.entry-info label{
     font-weight: 700;
+
 }
-.details-wp span{
+.details-wp span,.entry-info span{
     color:red;
     font-size: 15px;
     font-weight: 600;
     font-family: initial;
+}
+.details-wp .diachi span,.entry-info .diachi span{
+    color: #2360BB;
 }
 
 /*

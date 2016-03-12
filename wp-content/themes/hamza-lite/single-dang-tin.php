@@ -21,7 +21,7 @@ $hamza_lite_post_class = get_post_meta($post->ID, 'hamza_lite_sidebar_layout', t
 
                 <?php while (have_posts()) : the_post(); ?>
 
-                    <?php get_template_part('template-parts/content', 'single'); ?>
+                    <?php get_template_part('template-parts/content', 'dang-tin'); ?>
 
                     <?php // hamza_lite_post_nav(); ?>
 
@@ -43,11 +43,40 @@ $hamza_lite_post_class = get_post_meta($post->ID, 'hamza_lite_sidebar_layout', t
         if ($hamza_lite_post_class == 'both-sidebar') {
             ?>
         </div> 
-    <?php
+        <?php
     }
 
     get_sidebar('right');
     ?>
 </div>
-
+<script>
+    jQuery(function ($) {
+        $('.dtich span').autoNumeric("init", {
+            aSep: ' ',
+            aDec: ',',
+            pSign: 's',
+            vMin: '0.00',
+            vMax: '9999999999.99',
+            mDec: 0,
+            aSign: ' m2'
+        });
+        $('.gia span').each(function () {
+            var value = $(this).text();
+            if (value != 0) {
+                console.log(value);
+                if (value < 1000) {
+                    $(this).text(value + ' triệu');
+                } else {
+                    $(this).text(parseFloat(value) / 1000 + ' tỉ');
+                }
+            } else {
+                $(this).text('0 triệu');
+            }
+        });
+        $('.dtich span').each(function () {
+            var value = $(this).text();
+            $(this).text(value.substring(1, value.length));
+        });
+    });
+</script>
 <?php get_footer(); ?>
