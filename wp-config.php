@@ -78,10 +78,10 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 // Enable WP_DEBUG mode
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 // Enable Debug logging to the /wp-content/debug.log file
-define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_LOG', false);
 
 // Disable display of errors and warnings 
 define('WP_DEBUG_DISPLAY', false);
