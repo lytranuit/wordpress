@@ -178,6 +178,17 @@ $this->sections[] = array(
         ),
 
         array(
+                'id'       		=> 'use_um_gravatar_default_image',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Use Default plugin avatar as Gravatar\'s Default avatar','ultimatemember' ),
+				'default' 		=> 0,
+				'desc' 	   		=> __('Do you want to use the plugin default avatar instead of the gravatar default photo (If the user did not upload a custom profile photo / avatar)','ultimatemember'),
+				'on'			=> __('Yes','ultimatemember'),
+				'off'			=> __('No','ultimatemember'),
+				'required'		=> array( 'use_gravatars', '=', 1 ),
+        ),
+
+        array(
                 'id'       		=> 'reset_require_strongpass',
                 'type'     		=> 'switch',
                 'title'   		=> __( 'Require a strong password? (when user resets password only)','ultimatemember' ),
@@ -1894,6 +1905,16 @@ $this->sections[] = array(
                 'title'    		=> __( 'Allow Port forwarding in URL','ultimatemember' ),
                 'default'  		=> 0,
 				'desc' 	   		=> __('Turn on If you want to include port number in URLs','ultimatemember'),
+				'on'			=> __('On','ultimatemember'),
+				'off'			=> __('Off','ultimatemember'),
+        ),
+
+        array(
+                'id'      		=> 'um_force_utf8_strings',
+                'type'     		=> 'switch',
+                'title'    		=> __( 'Force Strings to UTF-8 Encoding','ultimatemember' ),
+                'default'  		=> 0,
+				'desc' 	   		=> __('Turn on If you want to force labels and fields to use UTF-8 encoding','ultimatemember'),
 				'on'			=> __('On','ultimatemember'),
 				'off'			=> __('Off','ultimatemember'),
         ),

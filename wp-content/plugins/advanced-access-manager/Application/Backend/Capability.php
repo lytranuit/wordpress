@@ -96,14 +96,18 @@ class AAM_Backend_Capability {
     protected function getCapabilityList(AAM_Core_Subject_User $subject) {
         $list = array();
         
-        foreach($subject->roles as $slug) {
-            $role = AAM_Core_API::getRoles()->get_role($slug);
-            if ($role) {
-                $list = array_keys($role->capabilities);
-                break;
+        //IMPORTANT! Cause it is possible that user is not assigned to any role
+        $roles = $subject->roles;
+        
+        if (is_array($roles)) {
+            foreach($roles as $slug) {
+                $role = AAM_Core_API::getRoles()->get_role($slug);
+                if ($role) {
+                    $list = array_keys($role->capabilities);
+                    break;
+                }
             }
         }
-        
         return $list;
     }
     
@@ -131,7 +135,9 @@ class AAM_Backend_Capability {
         $caps = $response = array();
         
         foreach (AAM_Core_API::getRoles()->role_objects as $role) {
-            $caps = array_merge($caps, $role->capabilities);
+            if (is_array($role->capabilities)) {
+                $caps = array_merge($caps, $role->capabilities);
+            }
         }
         
         foreach (array_keys($caps) as $cap) {

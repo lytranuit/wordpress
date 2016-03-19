@@ -414,9 +414,11 @@ class UM_Fields {
 	function is_selected($key, $value, $data){
 		global $ultimatemember;
 
-		if ( isset( $ultimatemember->form->post_form[$key] ) && is_array( $ultimatemember->form->post_form[$key] ) ) {
+		$key = apply_filters('um_is_selected_filter_key', $key );
 
-			if ( in_array( $value, $ultimatemember->form->post_form[$key] ) ){
+		if ( isset( $ultimatemember->form->post_form[ $key ] ) && is_array( $ultimatemember->form->post_form[ $key ] ) ) {
+
+			if ( in_array( $value, $ultimatemember->form->post_form[ $key ] ) ){
 				return true;
 			}
 
@@ -424,11 +426,14 @@ class UM_Fields {
 
 			if ( !isset( $ultimatemember->form->post_form ) ) {
 
-				if ( um_user( $key ) && $this->editing == true && is_array( um_user( $key ) ) && in_array($value, um_user( $key ) ) ) {
+				$field_value = um_user( $key );
+				$field_value= apply_filters('um_is_selected_filter_value', $field_value);
+
+				if ( $field_value && $this->editing == true && is_array( $field_value ) && in_array( $value, $field_value ) ) {
 					return true;
 				}
 
-				if ( um_user( $key ) && $this->editing == true && !is_array( um_user( $key ) ) && um_user( $key ) == $value ) {
+				if ( $field_value && $this->editing == true && !is_array( $field_value ) && $field_value == $value ) {
 					return true;
 				}
 
@@ -615,7 +620,7 @@ class UM_Fields {
 
 				$array['disabled'] = '';
 
-				if ( $key == 'user_login' && $this->set_mode == 'account' ) {
+				if ( $key == 'user_login' && isset(  $this->set_mode ) && $this->set_mode == 'account' ) {
 					$array['disabled'] = 'disabled="disabled"';
 				}
 
@@ -1569,7 +1574,7 @@ class UM_Fields {
 								$option_value = $k;
 							}
 
-							$output .= '<option value="'.$option_value.'" ';
+							$output .= '<option value="' . htmlentities($option_value) . '" ';
 							if ( $this->is_selected($form_key, $option_value, $data) ) {
 								$output.= 'selected';
 							}
@@ -1639,7 +1644,7 @@ class UM_Fields {
 								$opt_value = $v;
 							}
 
-							$output .= '<option value="'.$opt_value.'" ';
+							$output .= '<option value="'.htmlentities($opt_value).'" ';
 							if ( $this->is_selected($key, $opt_value, $data) ) {
 								$output.= 'selected';
 							}
@@ -1721,7 +1726,7 @@ class UM_Fields {
 							}
 
 							$output .= '<label class="um-field-radio '.$active.' um-field-half '.$col_class.'">';
-							$output .= '<input type="radio" name="'.$form_key.'" value="'.$option_value.'" ';
+							$output .= '<input type="radio" name="'.$form_key.'" value="'.htmlentities($option_value).'" ';
 
 							if ( $this->is_radio_checked($key, $option_value, $data) ) {
 								$output.= 'checked';
@@ -2175,6 +2180,8 @@ class UM_Fields {
 		// Custom filter for field output
 		if ( isset( $this->set_mode ) ) {
 			$output = apply_filters("um_{$key}_form_show_field", $output, $this->set_mode);
+			$output = apply_filters("um_{$type}_form_show_field", $output, $this->set_mode);
+
 		}
 
 		return $output;
@@ -2424,8 +2431,12 @@ class UM_Fields {
 			if ( $borderradius ) $css_heading_borderradius = 'border-radius: ' . $borderradius . ' ' . $borderradius . ' 0px 0px;';
 
 			$output .= '<div class="um-row-heading" style="' . $css_heading_background_color . $css_heading_padding . $css_heading_text_color . $css_heading_borderradius . '">';
-			if ( isset($icon) ) $output .= '<span class="um-row-heading-icon"><i class="' . $icon . '"></i></span>';
-			$output .= $heading_text .'</div>';
+			
+			if ( isset( $icon ) ) {
+				$output .= '<span class="um-row-heading-icon"><i class="' . $icon . '"></i></span>';
+			}
+			
+			$output .= ( ! empty( $heading_text ) ? $heading_text: '') .'</div>';
 
 		} else {
 

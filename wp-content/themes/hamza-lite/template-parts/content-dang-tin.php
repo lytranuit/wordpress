@@ -33,12 +33,23 @@ $cat = wp_get_post_terms($post->ID, 'khu-vuc', array("fields" => "all"));
             </span>
         </div>
         <div class="col-md-12">
-            <div class="col-md-12" style="margin-left: -15px;font-weight: bold;color: black;" >Một số hình ảnh của bất động sản :</div>
-            <?php if (isset($meta['wpcf-hinh-anh']) && $meta['wpcf-hinh-anh'][0] != '') { ?>
+            <div class="col-md-12" style="margin-left: -15px;font-weight: bold;color: black;" >Vị trí google map:</div>
+            <?php
+            $location = $meta['wpcf-dia-chi'][0];
+
+            echo do_shortcode("[su_gmap responsive='no' width='100%' address='$location' class='gmap']");
+            ?>
+        </div>
+        <div class="col-md-12">
+            <div class = "col-md-12" style = "margin-left: -15px;font-weight: bold;color: black;" >Một số hình ảnh của bất động sản :</div>
+            <?php if (isset($meta['wpcf-hinh-anh']) && $meta['wpcf-hinh-anh'][0] != '') {
+                ?>
                 <?php foreach ($meta['wpcf-hinh-anh'] as $hinhanh) { ?>
                     <img src="<?php echo $hinhanh; ?>"/>
                 <?php } ?>
             <?php } ?>
         </div>
+
     </div>
 </article>
+

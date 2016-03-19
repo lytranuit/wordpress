@@ -180,11 +180,6 @@ abstract class AAM_Core_Subject {
     public function getObject($objectType, $id = 'none') {
         $object = null;
         
-        //make sure that object group is defined
-        if (!isset($this->_objects[$objectType])){
-            $this->_objects[$objectType] = array();
-        }
-        
         //check if there is an object with specified ID
         if (!isset($this->_objects[$objectType][$id])) {
             $classname = 'AAM_Core_Object_' . ucfirst($objectType);

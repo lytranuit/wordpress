@@ -54,24 +54,107 @@
 	***	@Get where user should be headed after logging
 	***/
 	function um_dynamic_login_page_redirect( $redirect_to = '' ) {
+		
 		global $ultimatemember;
+		
 		$uri = um_get_core_page( 'login' );
+		
 		if ( ! $redirect_to ) {
 			$redirect_to = $ultimatemember->permalinks->get_current_url();
 		}
-		$uri = add_query_arg( 'redirect_to', $redirect_to, $uri );
+
+		$redirect_key = urlencode_deep( $redirect_to );
+
+		$uri = add_query_arg( 'redirect_to', $redirect_key, $uri );
+
 		return $uri;
 	}
+
+	/**
+	 * Set redirect key
+	 * @param  string $url 
+	 * @return string $redirect_key
+	 */
+	function um_set_redirect_url( $url ){
+		
+		if( um_is_session_started() === FALSE ){
+				session_start();
+		}
+
+		$redirect_key = wp_generate_password(12,false);
+
+		$_SESSION['um_redirect_key'] = array( $redirect_key => $url );
+
+		return $redirect_key;
+	}
+
+	/**
+	 * Set redirect key
+	 * @param  string $url 
+	 * @return string $redirect_key
+	 */
+	function um_get_redirect_url( $key ){
+		
+		if( um_is_session_started() === FALSE ){
+				session_start();
+		}
+
+		if( isset( $_SESSION['um_redirect_key'][ $key ] ) ){
+			
+			$url = $_SESSION['um_redirect_key'][ $key ];
+
+			return $url;
+
+		}else{
+
+			if( isset( $_SESSION['um_redirect_key'] ) ){
+				foreach ( $_SESSION['um_redirect_key'] as $key => $url ) {
+
+					return $url;
+
+					break;
+				}
+			}
+		}
+
+		return;
+	}
+
+
+	/**
+	 * Checks if session has been started
+	 * @return bool
+	*/
+	function um_is_session_started(){
+		
+		if ( php_sapi_name() !== 'cli' ) {
+		        if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+		            return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+		        } else {
+		            return session_id() === '' ? FALSE : TRUE;
+		        }
+		}
+		
+		return FALSE;
+	}
+
 
 	/***
 	*** @user clean basename
 	***/
-	function um_clean_user_basename( $value ){
+	function um_clean_user_basename( $value ) {
 
+		$raw_value = $value;
+		$value = str_replace('<hon>', '', $value);
+		$value = preg_replace('/^([a-z]{2,3})\./', '$1<hon>', $value);
+		$value = preg_replace('/([a-z]{2,3})\.$/', '$1<hon>', $value);
 		$value = str_replace('.', ' ', $value);
 		$value = str_replace('-', ' ', $value);
 		$value = str_replace('+', ' ', $value);
+		$value = str_replace('<hon>', '.', $value);
 
+		$value = apply_filters('um_clean_user_basename_filter', $value, $raw_value );
+		
 		return $value;
 	}
 	/***
@@ -295,7 +378,7 @@ function um_user_ip() {
 						$k = __('date submitted','ultimatemember');
 						$v = date("d M Y H:i", $v);
 					}
-				
+
 					if ( $style ) {
 						if ( !$v ) $v = __('(empty)','ultimatemember');
 						$output .= "<p><label>$k</label><span>$v</span></p>";
@@ -1209,6 +1292,10 @@ function um_fetch_user( $user_id ) {
 					$value = unserialize( $value );
 				}
 
+				if( $data == 'role' ){
+					return strtolower($value);
+				}
+
 				return $value;
 				break;
 
@@ -1329,7 +1416,7 @@ function um_fetch_user( $user_id ) {
 				break;
 
 			case 'profile_photo':
-				
+
 				$has_profile_photo = false;
 
 				if ( um_profile('profile_photo') ) {
@@ -1340,12 +1427,15 @@ function um_fetch_user( $user_id ) {
 				}
 
 				$avatar_uri = apply_filters('um_user_avatar_url_filter', $avatar_uri, um_user('ID') );
-				
+
 				if ( $avatar_uri )
-					
+
 					if( um_get_option('use_gravatars') && ! um_user('synced_profile_photo') && ! $has_profile_photo ){
 						$avatar_uri  = um_get_domain_protocol().'gravatar.com/avatar/'.um_user('synced_gravatar_hashed_id');
 						$avatar_uri = add_query_arg('s',400, $avatar_uri);
+						if( um_get_option('use_um_gravatar_default_image') ){
+							$avatar_uri = add_query_arg('d', um_get_default_avatar_uri(), $avatar_uri  );
+						}
 					}
 
 					return '<img src="' . $avatar_uri . '" class="func-um_user gravatar avatar avatar-'.$attrs.' um-avatar" width="'.$attrs.'" height="'.$attrs.'" alt="" />';
@@ -1385,7 +1475,57 @@ function um_fetch_user( $user_id ) {
 		} else {
 				$protocol = 'http://';
 		}
-		
+
 		return $protocol;
 	}
 
+	/**
+	 * Check if meta_value exists
+	 * @param  string $key
+	 * @param  mixed $value 
+	 * @return integer
+	 */
+	function um_is_meta_value_exists( $key, $value ){
+		global $wpdb;
+
+		$count = $wpdb->get_var( $wpdb->prepare(
+				"SELECT COUNT(*) as count FROM {$wpdb->usermeta} WHERE meta_key = %s AND meta_value = %s ",
+				$key,
+				$value
+		) );
+
+		return $count;
+	}
+
+	/**
+	 * Force strings to UTF-8 encoded
+	 * @param  mixed $value
+	 * @return mixed
+	 */
+	function um_force_utf8_string( $value ){
+
+		if( is_array( $value ) ){
+			$arr_value = array();
+			foreach ($value as $key => $value) {
+				$utf8_decoded_value = utf8_decode( $value );
+
+				if( mb_check_encoding( $utf8_decoded_value, 'UTF-8') ){ 
+				 	array_push( $arr_value, $utf8_decoded_value );
+				}else{
+					array_push( $arr_value, $value );
+				}
+
+			}
+			return $arr_value;
+		}else{
+
+			$utf8_decoded_value = utf8_decode($value);
+
+			if( mb_check_encoding( $utf8_decoded_value, 'UTF-8') ){ 
+			 	return $utf8_decoded_value;
+			}
+		}
+
+		return $value;
+
+	}

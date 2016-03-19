@@ -3,7 +3,7 @@
 Plugin Name: Tawk.to Live Chat
 Plugin URI: https://tawk.to
 Description: Embeds Tawk.to live chat widget to every page
-Version: 0.1.1
+Version: 0.1.7
 Author: Tawkto
 */
 
@@ -12,8 +12,21 @@ if(!class_exists('TawkTo_Settings')){
 	class TawkTo_Settings{
 		const TAWK_WIDGET_ID_VARIABLE = 'tawkto-embed-widget-widget-id';
 		const TAWK_PAGE_ID_VARIABLE = 'tawkto-embed-widget-page-id';
+		const TAWK_VISIBILITY_OPTIONS = 'tawkto-visibility-options';
 
 		public function __construct(){
+
+			if(!get_option('tawkto-visibility-options',false))
+			{
+			$visibility = array (
+				'always_display' => 1,
+				'show_onfrontpage' => 0,
+				'show_oncategory' => 0,
+				'show_ontagpage' => 0
+			);
+			update_option( 'tawkto-visibility-options', $visibility);
+			}
+
 			add_action('admin_init', array(&$this, 'admin_init'));
 			add_action('admin_menu', array(&$this, 'add_menu'));
 			add_action('wp_ajax_tawkto_setwidget',  array(&$this, 'action_setwidget'));
@@ -21,12 +34,7 @@ if(!class_exists('TawkTo_Settings')){
 		}
 
 		public function admin_init(){
-			add_settings_section(
-				'tawkto-section',
-				'Embed Code',
-				array(&$this, 'settings_section_text'),
-				'tawkto_plugin'
-			);
+			register_setting( 'tawk_options', 'tawkto-visibility-options', array(&$this,'validate_options') );
 		}
 
 		public function action_setwidget() {
@@ -59,9 +67,14 @@ if(!class_exists('TawkTo_Settings')){
 			die();
 		}
 
-		public function settings_section_text(){
-			echo 'Please paste the embed code from within the tawk.to dashboard into the text area below.<br />' .
-				'No account ? <a href="https://tawk.to/?utm_source=wpdirectory&utm_medium=link&utm_campaign=signup" target="_blank">Get one for free here</a>';
+		public function validate_options($input){
+			
+			$input['always_display'] = ($input['always_display'] != '1')? 0 : 1;
+			$input['show_onfrontpage'] = ($input['show_onfrontpage'] != '1')? 0 : 1;
+			$input['show_oncategory'] = ($input['show_oncategory'] != '1')? 0 : 1;
+			$input['show_ontagpage'] = ($input['show_ontagpage'] != '1')? 0 : 1;;
+
+			return $input;
 		}
 
 		public function add_menu(){
@@ -101,24 +114,58 @@ if(!class_exists('TawkTo')){
 	class TawkTo{
 		public function __construct(){
 			$tawkto_settings = new TawkTo_Settings();
+			add_shortcode( 'tawkto', array($this,'shortcode_print_embed_code') );
 		}
 
 		public static function activate(){
+
+			$visibility = array (
+				'always_display' => 1,
+				'show_onfrontpage' => 0,
+				'show_oncategory' => 0,
+				'show_ontagpage' => 0
+			);
+		
 			add_option(TawkTo_Settings::TAWK_PAGE_ID_VARIABLE, '', '', 'yes');
 			add_option(TawkTo_Settings::TAWK_WIDGET_ID_VARIABLE, '', '', 'yes');
+			add_option(TawkTo_Settings::TAWK_VISIBILITY_OPTIONS, $visibility, '', 'yes');
 		}
 
 		public static function deactivate(){
 			delete_option(TawkTo_Settings::TAWK_PAGE_ID_VARIABLE);
 			delete_option(TawkTo_Settings::TAWK_WIDGET_ID_VARIABLE);
+			delete_option(TawkTo_Settings::TAWK_VISIBILITY_OPTIONS);
 		}
 
-		public function print_embed_code(){
+		public function shortcode_print_embed_code(){
+			add_action('wp_footer',  array($this, 'embed_code'));
+		}
+
+		public function embed_code()
+		{
 			$page_id = get_option('tawkto-embed-widget-page-id');
 			$widget_id = get_option('tawkto-embed-widget-widget-id');
 
-			if(!empty($page_id) && !empty($widget_id)){
+			if(!empty($page_id) && !empty($widget_id))
+			{
 				include(sprintf("%s/templates/widget.php", dirname(__FILE__)));
+			}
+		}	
+
+		public function print_embed_code()
+		{
+			$vsibility = get_option( 'tawkto-visibility-options' );
+
+			$display = FALSE;
+
+			if(($vsibility['show_oncategory'] == 1) && (is_home() || is_front_page()) ){ $display = TRUE; }
+			if( ($vsibility['show_oncategory'] == 1) && is_category() ){ $display = TRUE; }
+			if(($vsibility['show_ontagpage'] == 1) && is_tag() ){ $display = TRUE; }
+			if($vsibility['always_display'] == 1){ $display = TRUE; }
+
+			if($display == TRUE)
+			{
+				$this->embed_code();
 			}
 		}
 
@@ -158,14 +205,14 @@ if(class_exists('TawkTo')){
 	if(isset($tawkto)){
 		$tawkto->migrate_embed_code();
 
-		function plugin_settings_link($links){
+		function tawkto_plugin_settings_link($links){
 			$settings_link = '<a href="options-general.php?page=tawkto_plugin">Settings</a>';
 			array_unshift($links, $settings_link);
 			return $links;
 		}
 
 		$plugin = plugin_basename(__FILE__);
-		add_filter("plugin_action_links_$plugin", 'plugin_settings_link');
+		add_filter("plugin_action_links_$plugin", 'tawkto_plugin_settings_link');
 	}
 
 	add_action('wp_footer',  array($tawkto, 'print_embed_code'));

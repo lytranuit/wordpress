@@ -51,7 +51,6 @@ html {
     box-sizing:         border-box;
 }
 body {
-    background: #fff;
     font-family: 'Raleway', sans-serif;
     background: #eeeeee;
 }
@@ -437,7 +436,7 @@ h1.entry-title a{
     display: inline;
     font-size: 14px;
     font-weight: 300;
-    color: #d0d3d7;
+    color: #E21D1D;
 }
 .single .byline a:hover,
 .group-blog .byline a:hover,
@@ -1219,9 +1218,9 @@ HEADER
 }
 
 header.site-header { 
+    background-image: linear-gradient(to bottom,#2B822B,#67C322,rgba(103, 195, 34, 0.72),rgba(103, 195, 34, 0.23),#eeeeee);
     border-bottom: 1px solid #aeaeae;
-    background: #FFF;
-    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 8px 0px #52b680;
     position: relative;
 }
 .right-header-top{
@@ -1340,6 +1339,7 @@ header.site-header {
     margin: 0;
     list-style:none;
     width: auto;
+    background-image: linear-gradient(to bottom,#c13513,#992a05);
 }
 
 .nav-without-social-search .menu{
@@ -1373,13 +1373,15 @@ header.site-header {
     -moz-transition: all ease-in-out 0.5s;
 }
 #site-navigation .menu > ul > li > a{
-    color: #000;
-    padding: 5px 23px 15px 23px;
+    color: white;
+    padding: 5px 25px;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     border-top: 1px solid transparent;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
     transition: all ease-in-out 0.5s;
     -webkit-transition: all ease-in-out 0.5s;
     -moz-transition: all ease-in-out 0.5s;
@@ -1403,19 +1405,19 @@ header.site-header {
 }
 
 #site-navigation .menu > ul > li:hover > a:after{
-    color:#0a5487;
-    background: #0a5487 top center;
+    color:#2BBF2A;
+    background: #2BBF2A top center;
     width: 100%;
 }
 #site-navigation .menu > ul > li:hover > a, .menu li:hover.menu-item-has-children::after{
-    color: #0a5487;
+    color: #2BBF2A;
 }
 #site-navigation .menu > ul > li.current_page_item > a,
 #site-navigation .menu > ul > li.current-menu-item > a,
 #site-navigation .menu > ul > li.current_page_ancestor > a,
 #site-navigation .menu > ul > li.current-menu-ancestor > a{
     color:#0a5487;
-    border-top: 1px solid #0a5487;
+    border-top: 1px solid #2BBF2A;
 }
 #site-navigation .menu > ul > li.current_page_item > a:after,
 #site-navigation .menu > ul > li.current-menu-item > a:after,
@@ -3480,11 +3482,17 @@ CSS Login
 }
 .um-login-sidebar{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -10px;
+    right: 10px;
     vertical-align: middle;
     font-size: 20px;
     z-index: 66;
+}
+.um-login-sidebar ul{
+    background: white;
+}
+#user-area ul{
+    background: transparent;
 }
 
 .home article.hentry .entry-thumbnail img{
@@ -3609,4 +3617,24 @@ form-dang-tin
 }
 .search-thumb img{
     height: 150px;
+}
+.quangcao{
+    z-index: 100;
+    border: 1px solid;
+    width: 160px;
+    height: 380px;
+    padding: 10px;
+    background: white;
+    vertical-align: middle;
+    transition: all .5s;
+}
+.banner-left{
+    position: absolute;
+    top: 0px;
+    left: 1px;
+}
+.banner-right{
+    position: absolute;
+    top: 0px;
+    right: 1px;
 }

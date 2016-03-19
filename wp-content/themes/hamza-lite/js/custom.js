@@ -52,7 +52,10 @@ jQuery(function ($) {
         swidth = 390;
     }
 
-
+    $(window).scroll(function () {
+        var top = $(this).scrollTop();
+        $(".banner-left,.banner-right").css({"top": top});
+    });
     $(window).resize(function () {
         $('.slider-caption').each(function () {
             var cap_height = $(this).actual('outerHeight');

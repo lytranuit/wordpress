@@ -36,28 +36,30 @@ class UM_Mail {
 				$lang = icl_get_current_language() . '/';
 			}
 		} else {
+			
 			$lang = get_locale();
+			$arr_english_lang = array('en','en_US','en_NZ','en_ZA','en_AU','en_GB');
 
-			if( $lang == 'en_US' ){
-				$lang = '/';
-			}else{
+			if( in_array( $lang, $arr_english_lang ) || strpos( $lang , 'en_' ) > -1 ){
+				$lang = '';
+			} else {
 				$lang .= '/';
 			}
-			
-		}
 
+		}
+		
 		if ( file_exists( get_stylesheet_directory() . '/ultimate-member/templates/email/' . $lang . $template . '.html' ) ) {
 			$template_path = get_stylesheet_directory() . '/ultimate-member/templates/email/' . $lang . $template . '.html';
-		}
-
-		if ( isset( $args['path'] ) ) {
-			$path = $args['path'] . $lang;
 		} else {
-			$path = um_path . 'templates/email/' . $lang;
-		}
+			if ( isset( $args['path'] ) ) {
+				$path = $args['path'] . $lang;
+			} else {
+				$path = um_path . 'templates/email/' . $lang;
+			}
 
-		if ( file_exists( $path . $template . '.html' ) ) {
-			$template_path = $path . $template . '.html';
+			if ( file_exists( $path . $template . '.html' ) ) {
+				$template_path = $path . $template . '.html';
+			}
 		}
 
 		return apply_filters( 'um_email_template_path', $template_path, $template, $args );
@@ -82,7 +84,7 @@ class UM_Mail {
 		if ( isset( $args['admin'] ) || isset( $args['plain_text'] ) ) {
 			$this->force_plain_text = 'forced';
 		}
-		
+
 
 		// HTML e-mail or text
 		if ( um_get_option('email_html') && $this->email_template( $template, $args ) ) {
@@ -94,7 +96,7 @@ class UM_Mail {
 
 		// Convert tags in body
 		$this->message = um_convert_tags( $this->message, $args );
-
+		
 		// Send mail
 		wp_mail( $email, $this->subject, $this->message, $this->headers, $this->attachments );
 		remove_filter( 'wp_mail_content_type', array(&$this, 'set_content_type')  );

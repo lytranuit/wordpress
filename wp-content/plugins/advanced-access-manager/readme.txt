@@ -3,7 +3,7 @@ Contributors: vasyltech
 Tags: access, access manager, role, user, capability, admin, page, post, widget
 Requires at least: 3.8
 Tested up to: 4.4
-Stable tag: 3.0.10
+Stable tag: 3.1.2
 
 One of the best tools in WordPress repository to manage access to your posts, 
 pages, categories and backend area for users, roles and visitors.
@@ -44,6 +44,22 @@ out more about the Advanced Access Manager.
 5. Posts & Pages access control form
 
 == Changelog ==
+
+= 3.1.2 =
+* Quick fix
+
+= 3.1.1 =
+* Fixed potential bug with check user capability functionality
+* Added social links to the AAM page
+
+= 3.1 =
+* Integrated User Switch with AAM
+* Fixed bugs reported by WP Error Fix
+* Removed intro message
+* Improved AAM speed
+* Updated AAM Utilities extension
+* Updated AAM Plus Package extension
+* Added new AAM Skeleton Extension for developers
 
 = 3.0.10 =
 * Fixed bug reported by WP Error Fix when user's first role does not exist

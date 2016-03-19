@@ -21,21 +21,27 @@
     </head>
 
     <body <?php body_class(); ?>>
-
         <div id="page" class="site">
+            <div class="banner-left quangcao" style="">
+                <h2>Liên hệ quảng cáo</h2>
+                <p class="text-danger">Hotline:0964461461</p>
+            </div>
+            <div class="banner-right quangcao" style="">
+                <h2>Liên hệ quảng cáo</h2>
+                <p class="text-danger">Hotline:0964461461</p>
+            </div>
             <header id="masthead" class="site-header" style="box-shadow: none;">
                 <div id="top-header">
                     <div class="ak-container">
 
                         <div class="header-wrap clearfix <?php do_action('hamza_lite_logo_alignment'); ?>">
-                            <div class="site-branding main-logo">
-                                <a href="<?php echo esc_url(home_url('/')); ?>">				
-                                    <?php if (get_header_image()) { ?>
-                                        <img src="<?php header_image(); ?>" alt="<?php bloginfo('name') ?>">
-                                    <?php } else { ?>
-                                        <h1 class="site-title"><?php bloginfo('title'); ?></h1>
-                                        <div class="tagline site-description"><?php bloginfo('description'); ?></div>
-                                    <?php } ?>		
+                            <div class="logo-site">
+                                <a href="<?php echo esc_url(home_url('/')); ?>">	
+                                    <img src="http://localhost/wordpress/wp-content/uploads/2016/03/logo-web.png" alt="<?php bloginfo('name') ?>" style="width: 150px;
+                                         height: 90px;">
+                                    <img src="http://localhost/wordpress/wp-content/uploads/2016/03/banner.png" alt="<?php bloginfo('name') ?>" style="    width: 86%;
+                                         height: 150px;">
+
                                 </a>		
                             </div><!-- .site-branding -->
 
