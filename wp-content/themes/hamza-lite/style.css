@@ -3499,7 +3499,7 @@ CSS Login
     width: 150px;
     height: 100px;
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .home article.hentry p{
     font-size: 12px;
@@ -3509,7 +3509,7 @@ CSS Login
     width:49%;
     vertical-align: top;
     margin-right: 5px;
-    border: 1px #989696;
+    border: 1px solid #EAEAEA;
     background: #FBFBFB;
     padding: 10px;
     margin-bottom: 10px;
