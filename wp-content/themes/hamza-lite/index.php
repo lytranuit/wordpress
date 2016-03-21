@@ -98,8 +98,22 @@ get_header();
 </section>
 <script>
     jQuery(function ($) {
-        $('.home article.hentry a.title-entry').each(function (index, element) {
-            $clamp(element, {clamp: 2});
+        $('.home article.hentry a.title-entry').dotdotdot({
+            /*	The text to add as ellipsis. */
+            ellipsis: '... ',
+            /*	How to cut off the text/html: 'word'/'letter'/'children' */
+            wrap: 'word',
+            /*	Wrap-option fallback to 'letter' for long words */
+            fallbackToLetter: true,
+            /*	jQuery-selector for the element to keep and put after the ellipsis. */
+            after: null,
+            /*	Whether to update the ellipsis: true/'window' */
+            watch: false,
+            /*	Optionally set a max-height, can be a number or function.
+             If null, the height will be measured. */
+            height: 50,
+            /*	Deviation for the height-option. */
+            tolerance: 0
         });
         $('.dtich span').autoNumeric("init", {
             aSep: ' ',
