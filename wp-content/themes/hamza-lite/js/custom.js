@@ -54,7 +54,7 @@ jQuery(function ($) {
     }
 
     $(window).scroll(function () {
-        var top = $(this).scrollTop();
+        var top = $(this).scrollTop() * 100 / 90; ///////// zoom 90%
         $(".banner-left,.banner-right").css({"top": top});
     });
     $(window).resize(function () {

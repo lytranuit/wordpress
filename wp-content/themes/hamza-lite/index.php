@@ -15,7 +15,7 @@ get_header();
 <section class="ak-container" id="ak-blog-post">
     <div id="primary" class="content-area">
         <main id="main-home" class="home-main" role="main">
-            <div class="tinnoibat" style="background: white;
+            <div class="tinnoibat row" style="background: white;
                  padding: 10px;
                  margin-bottom: 30px;
                  box-shadow: #848484 0px 0px 10px -2px;
@@ -57,7 +57,7 @@ get_header();
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
-            <div class="tinmoi" style="background: white;
+            <div class="tinmoi row" style="background: white;
                  padding: 10px;
                  margin-bottom: 10px;
                  box-shadow: #848484 0px 0px 10px -2px;">

@@ -1937,6 +1937,9 @@ pre code {
     .col-md-6 {
         width: 50%;
     }
+    .home article.hentry {
+        width: 49%;
+    }
     .col-md-5 {
         width: 41.66666667%;
     }

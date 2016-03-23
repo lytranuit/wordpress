@@ -3506,8 +3506,6 @@ CSS Login
     font-size: 12px;
 }
 .home article.hentry {
-    display: inline-block;
-    width:49%;
     vertical-align: top;
     margin-right: 5px;
     border: 1px solid #EAEAEA;
