@@ -1,4 +1,5 @@
 jQuery(function ($) {
+    console.log($(window).width());
     if (hamza_lite_data.option == 'true') {
         var slider_pager = true;
     } else {

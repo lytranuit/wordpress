@@ -84,7 +84,7 @@
         margin-right:2%;
     }
     #top-footer .footer2, #top-footer .footer3, #top-footer .footer4 {
-    width: 24%;
+        width: 24%;
     }
     .both-sidebar .sidebar .hamza_lite-recent-rightbar-content{
         width: 69%;
@@ -108,6 +108,7 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1068px){
+
     .slider-wrap .bx-wrapper .bx-controls-direction{
         top: 145px;
     }
@@ -159,7 +160,7 @@
     .slider-caption-container a{
         padding: 10px 30px !important;
     }
-    
+
     .boxed-layout .sidebar .hamza_lite-recent-rightbar-content{
         width: 69%;
     }
@@ -171,7 +172,7 @@
         font-size: 16px;
     }
     .clients-say-section .testimonial-slide {
-    background: rgba(0, 0, 0, 0) url("images/testimonial-quote.png") no-repeat scroll 3% 0;
+        background: rgba(0, 0, 0, 0) url("images/testimonial-quote.png") no-repeat scroll 3% 0;
     }
     .featured-post .featured-image::before, .featured-post .featured-icon::before{
         bottom: 190px
@@ -203,7 +204,7 @@
     .ak-container{ 
         width: 768px ;
     }
-        
+
     /*** FOOTER ***/
     #top-footer .footer{
         width: 50%;
@@ -272,7 +273,7 @@
         margin-top: 20px;
     }
 
-    
+
     .menu-toggle{ 
         background: #58b25e url("../images/menu.png") no-repeat scroll center center;
         border-radius: 5px;
@@ -320,7 +321,7 @@
         border-bottom:1px solid #DDD;
         text-align: left;
     }
-    
+
     #site-navigation .menu > ul > li > a {
         border: medium none;
         line-height: 42px;
@@ -334,19 +335,19 @@
     }
     #site-navigation .menu > ul > li:hover > a:after,
     #site-navigation .menu > ul > li.current_page_item > a,
-#site-navigation .menu > ul > li.current-menu-item > a,
-#site-navigation .menu > ul > li.current_page_ancestor > a,
-#site-navigation .menu > ul > li.current-menu-ancestor > a{
+    #site-navigation .menu > ul > li.current-menu-item > a,
+    #site-navigation .menu > ul > li.current_page_ancestor > a,
+    #site-navigation .menu > ul > li.current-menu-ancestor > a{
         background: none;
         border-top: none;
     }
     #site-navigation .menu > ul > li:hover > a,
     #site-navigation .menu > ul > li.current_page_item > a,
-#site-navigation .menu > ul > li.current-menu-item > a,
-#site-navigation .menu > ul > li.current_page_ancestor > a,
-#site-navigation .menu > ul > li.current-menu-ancestor > a{
-    color: #0a5487;
-}
+    #site-navigation .menu > ul > li.current-menu-item > a,
+    #site-navigation .menu > ul > li.current_page_ancestor > a,
+    #site-navigation .menu > ul > li.current-menu-ancestor > a{
+        color: #0a5487;
+    }
     #site-navigation .menu > ul > li:hover > a:before, 
     #site-navigation .menu > ul > li.current_page_item > a:before, 
     #site-navigation .menu > ul > li.current-menu-item > a:before, 
@@ -476,8 +477,8 @@
     }
 
     /*TESTIMONIAL SECTION*/
-    
-    
+
+
     .clients-say-section .testimonial-slide{
         padding: 0 40px;
         line-height: 25px;
@@ -559,7 +560,7 @@
     .business-section .business-wrapper:last-child{
         margin-bottom: 0;
     }
-    
+
     /****************************************
     FEATURE SECTION
     *****************************************/
@@ -575,7 +576,7 @@
 
 
 
-    
+
 
 }
 
@@ -588,7 +589,7 @@
     h4{ font-size:18px;}
     h5{ font-size:16px;}
     h6{ font-size:14px;}
-    
+
     /*================================================
     HEADER SEARCH AND SOCIAL
     ================================================*/
@@ -646,7 +647,7 @@
     .cat-portfolio-list{
         height: 220px;
     }
-    
+
     .header-wrap .searchform{
         width: 100%;
     }
@@ -675,7 +676,7 @@
         float: none;
         width: 100%;
     }
-    
+
     .map-form div.wpcf7 {
         float: none;
         margin-right: 0;
@@ -694,7 +695,7 @@
         width: 87%;
     }
 
-    
+
 }
 
 @media screen and (max-width:520px) and (orientation:portrait){
@@ -760,7 +761,7 @@
         height: auto !important;
         margin: 0;
     }
-    
+
     .header-wrap .searchform{
         width: 100%;
     }
@@ -794,8 +795,8 @@
     #about-section .welcome-content b{
         font-size: 17px;
     }
-    
-    
+
+
     .service-title-section > figure{
         margin: 0 auto;
         display: block;
@@ -808,7 +809,7 @@
     .service-section p{
         text-align: center;
     }
-    
+
 
     .work-box, .work-box:nth-child(even){
         position: static;
@@ -825,7 +826,7 @@
         margin-right: 0;
     }
 
-    
+
 
     /*========================================
     BLOG SECTION
@@ -885,7 +886,7 @@
         font-size: 15px;
         text-align: center;
     }
-     .single .blog-author-img, .cat-blog-list .blog-author-img{
+    .single .blog-author-img, .cat-blog-list .blog-author-img{
         float: none;
         margin: 0 auto;
     }
@@ -940,7 +941,7 @@
     /*=================================================
     TESTIMONIAL SECTION
     ==================================================*/
-    
+
     .cat-testimonial-list{
         min-height: auto;
         border-bottom: 1px dashed #ccc;
@@ -992,11 +993,11 @@
         width: 100%;
     }
     #top-footer .apsc-theme-2 .apsc-each-profile {
-    display: inline-block;
-    margin: 0 auto 5px;
-    min-height: 73px;
-    text-align: center;
-    float: none;
+        display: inline-block;
+        margin: 0 auto 5px;
+        min-height: 73px;
+        text-align: center;
+        float: none;
     }
     #respond .comment-form-author, #respond .comment-form-email{
         float: none;
@@ -1023,5 +1024,10 @@
     .nav-links .nav-previous, .nav-links .nav-next{
         width: 100%;
         float: none;
+    }
+}
+@media (max-width:1299px){
+    .quangcao{
+        display: none;
     }
 }
