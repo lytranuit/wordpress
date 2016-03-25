@@ -12,7 +12,7 @@
  */
 get_header();
 ?>
-<section class="ak-container" id="ak-blog-post">
+<section class="container" id="ak-blog-post">
     <div id="primary" class="content-area">
         <main id="main-home" class="home-main" role="main">
             <div class="tinnoibat row" style="background: white;

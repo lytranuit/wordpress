@@ -121,12 +121,14 @@
             </header><!-- #masthead -->
             <?php if (is_home() || is_front_page()) { ?>
                 <section id="slider-banner">
-                    <div class="ak-container">
-                        <div class="slider-wrap" style="display: inline-block;">
-                            <?php do_action('hamza_lite_bxslider'); ?>
-                        </div>
-                        <div class="search-box" style="">
-                            <?php get_template_part('searchform', 'advanced'); ?>
+                    <div class="container">
+                        <div class="row">
+                            <div class="slider-wrap" style="display: inline-block;">
+                                <?php do_action('hamza_lite_bxslider'); ?>
+                            </div>
+                            <div class="search-box" style="">
+                                <?php get_template_part('searchform', 'advanced'); ?>
+                            </div>
                         </div>
                     </div>
                 </section><!-- #slider-banner -->
