@@ -1417,7 +1417,7 @@ header.site-header {
 #site-navigation .menu > ul > li.current-menu-item > a,
 #site-navigation .menu > ul > li.current_page_ancestor > a,
 #site-navigation .menu > ul > li.current-menu-ancestor > a{
-    color:#0a5487;
+    color:#2BBF2A;
     border-top: 1px solid #2BBF2A;
 }
 #site-navigation .menu > ul > li.current_page_item > a:after,

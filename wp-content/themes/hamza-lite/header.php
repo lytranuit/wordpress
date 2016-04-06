@@ -37,9 +37,9 @@
                         <div class="header-wrap clearfix <?php do_action('hamza_lite_logo_alignment'); ?>">
                             <div class="logo-site">
                                 <a href="<?php echo esc_url(home_url('/')); ?>">	
-                                    <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2016/03/logo-web.png" alt="<?php bloginfo('name') ?>" style="width: 150px;
-                                         height: 90px;">
-                                    <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2016/03/banner.png" alt="<?php bloginfo('name') ?>" style="    width: 86%;
+                                    <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2016/03/logo.jpg" alt="<?php bloginfo('name') ?>" style="width: 150px;
+                                         height: 150px;">
+                                    <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2016/03/banner.jpg" alt="<?php bloginfo('name') ?>" style="width: 86%;
                                          height: 150px;">
 
                                 </a>		
